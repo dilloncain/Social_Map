@@ -19,6 +19,7 @@
 		78EAF8542244783E00F10DD2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78EAF8532244783E00F10DD2 /* GoogleService-Info.plist */; };
 		78EAF8552244783E00F10DD2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78EAF8532244783E00F10DD2 /* GoogleService-Info.plist */; };
 		78EAF8562244783E00F10DD2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78EAF8532244783E00F10DD2 /* GoogleService-Info.plist */; };
+		78EAF8652244A60C00F10DD2 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EAF8642244A60C00F10DD2 /* SignInViewController.swift */; };
 		9412F87A8F17D273DA5CDEE1 /* Pods_Social_MapUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FD4AA7F16AAE1C30B69DB14 /* Pods_Social_MapUITests.framework */; };
 		F12E984219B2B70A080B3F5E /* Pods_Social_MapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03ADAD6C357597D467C58CAC /* Pods_Social_MapTests.framework */; };
 /* End PBXBuildFile section */
@@ -65,6 +66,7 @@
 		78EAF8472244765600F10DD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78EAF8532244783E00F10DD2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		78EAF85722448E4E00F10DD2 /* PINCache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PINCache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78EAF8642244A60C00F10DD2 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		7D78B7CD32BC4E2836BFD37B6450444F /* SCSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SCSDKCoreKit.framework; sourceTree = "<group>"; };
 		D523193CE8B4EE1363967BDC4C3C97A9 /* SCSDKBitmojiKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SCSDKBitmojiKit.framework; sourceTree = "<group>"; };
 		D9782F642884C3FAD1A3CB94 /* Pods-Social_MapUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social_MapUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Social_MapUITests/Pods-Social_MapUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -136,8 +138,8 @@
 		78EAF8212244765400F10DD2 /* Social_Map */ = {
 			isa = PBXGroup;
 			children = (
+				78EAF8632244A51C00F10DD2 /* Controller */,
 				78EAF8222244765400F10DD2 /* AppDelegate.swift */,
-				78EAF8242244765400F10DD2 /* ViewController.swift */,
 				78EAF8262244765400F10DD2 /* Main.storyboard */,
 				78EAF82C2244765600F10DD2 /* Assets.xcassets */,
 				78EAF82E2244765600F10DD2 /* LaunchScreen.storyboard */,
@@ -174,6 +176,15 @@
 				7D78B7CD32BC4E2836BFD37B6450444F /* SCSDKCoreKit.framework */,
 			);
 			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		78EAF8632244A51C00F10DD2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				78EAF8242244765400F10DD2 /* ViewController.swift */,
+				78EAF8642244A60C00F10DD2 /* SignInViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		AFD8CFF65B4CC45E92B6234E /* Pods */ = {
@@ -434,6 +445,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78EAF8652244A60C00F10DD2 /* SignInViewController.swift in Sources */,
 				78EAF8252244765400F10DD2 /* ViewController.swift in Sources */,
 				78EAF82B2244765400F10DD2 /* Social_Map.xcdatamodeld in Sources */,
 				78EAF8232244765400F10DD2 /* AppDelegate.swift in Sources */,
