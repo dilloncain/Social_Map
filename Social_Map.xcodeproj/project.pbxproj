@@ -1,0 +1,797 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5CD84B3B70CC622F5ADEBE5A /* Pods_Social_Map.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21727BB7ADCD8456E3826CC8 /* Pods_Social_Map.framework */; };
+		78EAF8232244765400F10DD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EAF8222244765400F10DD2 /* AppDelegate.swift */; };
+		78EAF8252244765400F10DD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EAF8242244765400F10DD2 /* ViewController.swift */; };
+		78EAF8282244765400F10DD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78EAF8262244765400F10DD2 /* Main.storyboard */; };
+		78EAF82B2244765400F10DD2 /* Social_Map.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 78EAF8292244765400F10DD2 /* Social_Map.xcdatamodeld */; };
+		78EAF82D2244765600F10DD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78EAF82C2244765600F10DD2 /* Assets.xcassets */; };
+		78EAF8302244765600F10DD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78EAF82E2244765600F10DD2 /* LaunchScreen.storyboard */; };
+		78EAF83B2244765600F10DD2 /* Social_MapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EAF83A2244765600F10DD2 /* Social_MapTests.swift */; };
+		78EAF8462244765600F10DD2 /* Social_MapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EAF8452244765600F10DD2 /* Social_MapUITests.swift */; };
+		78EAF8542244783E00F10DD2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78EAF8532244783E00F10DD2 /* GoogleService-Info.plist */; };
+		78EAF8552244783E00F10DD2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78EAF8532244783E00F10DD2 /* GoogleService-Info.plist */; };
+		78EAF8562244783E00F10DD2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78EAF8532244783E00F10DD2 /* GoogleService-Info.plist */; };
+		9412F87A8F17D273DA5CDEE1 /* Pods_Social_MapUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FD4AA7F16AAE1C30B69DB14 /* Pods_Social_MapUITests.framework */; };
+		F12E984219B2B70A080B3F5E /* Pods_Social_MapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03ADAD6C357597D467C58CAC /* Pods_Social_MapTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		78EAF8372244765600F10DD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78EAF8172244765400F10DD2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 78EAF81E2244765400F10DD2;
+			remoteInfo = Social_Map;
+		};
+		78EAF8422244765600F10DD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78EAF8172244765400F10DD2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 78EAF81E2244765400F10DD2;
+			remoteInfo = Social_Map;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03ADAD6C357597D467C58CAC /* Pods_Social_MapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Social_MapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		08014D0CC69236B62ED3489B /* Pods-Social_MapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social_MapTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Social_MapTests/Pods-Social_MapTests.release.xcconfig"; sourceTree = "<group>"; };
+		21727BB7ADCD8456E3826CC8 /* Pods_Social_Map.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Social_Map.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FD4AA7F16AAE1C30B69DB14 /* Pods_Social_MapUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Social_MapUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		391218C18A4C8CABD8B44643 /* Pods-Social_MapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social_MapTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Social_MapTests/Pods-Social_MapTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4582E7F3CA1AA80E51B31855 /* Pods-Social_MapUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social_MapUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Social_MapUITests/Pods-Social_MapUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4C57A4A024ED68FE25F70480 /* Pods-Social_Map.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social_Map.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Social_Map/Pods-Social_Map.debug.xcconfig"; sourceTree = "<group>"; };
+		784D205800EB6492528756BFA15AAF09 /* SCSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SCSDKLoginKit.framework; sourceTree = "<group>"; };
+		78EAF81F2244765400F10DD2 /* Social_Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Social_Map.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		78EAF8222244765400F10DD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		78EAF8242244765400F10DD2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		78EAF8272244765400F10DD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		78EAF82A2244765400F10DD2 /* Social_Map.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Social_Map.xcdatamodel; sourceTree = "<group>"; };
+		78EAF82C2244765600F10DD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		78EAF82F2244765600F10DD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		78EAF8312244765600F10DD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78EAF8362244765600F10DD2 /* Social_MapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Social_MapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		78EAF83A2244765600F10DD2 /* Social_MapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Social_MapTests.swift; sourceTree = "<group>"; };
+		78EAF83C2244765600F10DD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78EAF8412244765600F10DD2 /* Social_MapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Social_MapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		78EAF8452244765600F10DD2 /* Social_MapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Social_MapUITests.swift; sourceTree = "<group>"; };
+		78EAF8472244765600F10DD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78EAF8532244783E00F10DD2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		78EAF85722448E4E00F10DD2 /* PINCache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PINCache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D78B7CD32BC4E2836BFD37B6450444F /* SCSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SCSDKCoreKit.framework; sourceTree = "<group>"; };
+		D523193CE8B4EE1363967BDC4C3C97A9 /* SCSDKBitmojiKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SCSDKBitmojiKit.framework; sourceTree = "<group>"; };
+		D9782F642884C3FAD1A3CB94 /* Pods-Social_MapUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social_MapUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Social_MapUITests/Pods-Social_MapUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DD5BE81B8E1F1D480855FF2E /* Pods-Social_Map.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social_Map.release.xcconfig"; path = "Pods/Target Support Files/Pods-Social_Map/Pods-Social_Map.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		78EAF81C2244765400F10DD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CD84B3B70CC622F5ADEBE5A /* Pods_Social_Map.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78EAF8332244765600F10DD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F12E984219B2B70A080B3F5E /* Pods_Social_MapTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78EAF83E2244765600F10DD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9412F87A8F17D273DA5CDEE1 /* Pods_Social_MapUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		16132AEB9B450FB51D84CE16 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				21727BB7ADCD8456E3826CC8 /* Pods_Social_Map.framework */,
+				03ADAD6C357597D467C58CAC /* Pods_Social_MapTests.framework */,
+				2FD4AA7F16AAE1C30B69DB14 /* Pods_Social_MapUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		78EAF8162244765400F10DD2 = {
+			isa = PBXGroup;
+			children = (
+				78EAF85722448E4E00F10DD2 /* PINCache.framework */,
+				78EAF8212244765400F10DD2 /* Social_Map */,
+				78EAF8392244765600F10DD2 /* Social_MapTests */,
+				78EAF8442244765600F10DD2 /* Social_MapUITests */,
+				78EAF8202244765400F10DD2 /* Products */,
+				AFD8CFF65B4CC45E92B6234E /* Pods */,
+				16132AEB9B450FB51D84CE16 /* Frameworks */,
+				78EAF8622244916100F10DD2 /* Recovered References */,
+			);
+			sourceTree = "<group>";
+		};
+		78EAF8202244765400F10DD2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				78EAF81F2244765400F10DD2 /* Social_Map.app */,
+				78EAF8362244765600F10DD2 /* Social_MapTests.xctest */,
+				78EAF8412244765600F10DD2 /* Social_MapUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		78EAF8212244765400F10DD2 /* Social_Map */ = {
+			isa = PBXGroup;
+			children = (
+				78EAF8222244765400F10DD2 /* AppDelegate.swift */,
+				78EAF8242244765400F10DD2 /* ViewController.swift */,
+				78EAF8262244765400F10DD2 /* Main.storyboard */,
+				78EAF82C2244765600F10DD2 /* Assets.xcassets */,
+				78EAF82E2244765600F10DD2 /* LaunchScreen.storyboard */,
+				78EAF8312244765600F10DD2 /* Info.plist */,
+				78EAF8292244765400F10DD2 /* Social_Map.xcdatamodeld */,
+				78EAF8532244783E00F10DD2 /* GoogleService-Info.plist */,
+			);
+			path = Social_Map;
+			sourceTree = "<group>";
+		};
+		78EAF8392244765600F10DD2 /* Social_MapTests */ = {
+			isa = PBXGroup;
+			children = (
+				78EAF83A2244765600F10DD2 /* Social_MapTests.swift */,
+				78EAF83C2244765600F10DD2 /* Info.plist */,
+			);
+			path = Social_MapTests;
+			sourceTree = "<group>";
+		};
+		78EAF8442244765600F10DD2 /* Social_MapUITests */ = {
+			isa = PBXGroup;
+			children = (
+				78EAF8452244765600F10DD2 /* Social_MapUITests.swift */,
+				78EAF8472244765600F10DD2 /* Info.plist */,
+			);
+			path = Social_MapUITests;
+			sourceTree = "<group>";
+		};
+		78EAF8622244916100F10DD2 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				784D205800EB6492528756BFA15AAF09 /* SCSDKLoginKit.framework */,
+				D523193CE8B4EE1363967BDC4C3C97A9 /* SCSDKBitmojiKit.framework */,
+				7D78B7CD32BC4E2836BFD37B6450444F /* SCSDKCoreKit.framework */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		AFD8CFF65B4CC45E92B6234E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4C57A4A024ED68FE25F70480 /* Pods-Social_Map.debug.xcconfig */,
+				DD5BE81B8E1F1D480855FF2E /* Pods-Social_Map.release.xcconfig */,
+				391218C18A4C8CABD8B44643 /* Pods-Social_MapTests.debug.xcconfig */,
+				08014D0CC69236B62ED3489B /* Pods-Social_MapTests.release.xcconfig */,
+				4582E7F3CA1AA80E51B31855 /* Pods-Social_MapUITests.debug.xcconfig */,
+				D9782F642884C3FAD1A3CB94 /* Pods-Social_MapUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		78EAF81E2244765400F10DD2 /* Social_Map */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78EAF84A2244765600F10DD2 /* Build configuration list for PBXNativeTarget "Social_Map" */;
+			buildPhases = (
+				097892A5C86FCBCA2B12707C /* [CP] Check Pods Manifest.lock */,
+				78EAF81B2244765400F10DD2 /* Sources */,
+				78EAF81C2244765400F10DD2 /* Frameworks */,
+				78EAF81D2244765400F10DD2 /* Resources */,
+				8EFB25D35980C77BAFE01535 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Social_Map;
+			productName = Social_Map;
+			productReference = 78EAF81F2244765400F10DD2 /* Social_Map.app */;
+			productType = "com.apple.product-type.application";
+		};
+		78EAF8352244765600F10DD2 /* Social_MapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78EAF84D2244765600F10DD2 /* Build configuration list for PBXNativeTarget "Social_MapTests" */;
+			buildPhases = (
+				2FFFE6B7F7D8C8473484B25C /* [CP] Check Pods Manifest.lock */,
+				78EAF8322244765600F10DD2 /* Sources */,
+				78EAF8332244765600F10DD2 /* Frameworks */,
+				78EAF8342244765600F10DD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				78EAF8382244765600F10DD2 /* PBXTargetDependency */,
+			);
+			name = Social_MapTests;
+			productName = Social_MapTests;
+			productReference = 78EAF8362244765600F10DD2 /* Social_MapTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		78EAF8402244765600F10DD2 /* Social_MapUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78EAF8502244765600F10DD2 /* Build configuration list for PBXNativeTarget "Social_MapUITests" */;
+			buildPhases = (
+				12F9E7FF5B7FA98980D08A79 /* [CP] Check Pods Manifest.lock */,
+				78EAF83D2244765600F10DD2 /* Sources */,
+				78EAF83E2244765600F10DD2 /* Frameworks */,
+				78EAF83F2244765600F10DD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				78EAF8432244765600F10DD2 /* PBXTargetDependency */,
+			);
+			name = Social_MapUITests;
+			productName = Social_MapUITests;
+			productReference = 78EAF8412244765600F10DD2 /* Social_MapUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		78EAF8172244765400F10DD2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Cain Computers";
+				TargetAttributes = {
+					78EAF81E2244765400F10DD2 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					78EAF8352244765600F10DD2 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 78EAF81E2244765400F10DD2;
+					};
+					78EAF8402244765600F10DD2 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 78EAF81E2244765400F10DD2;
+					};
+				};
+			};
+			buildConfigurationList = 78EAF81A2244765400F10DD2 /* Build configuration list for PBXProject "Social_Map" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 78EAF8162244765400F10DD2;
+			productRefGroup = 78EAF8202244765400F10DD2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				78EAF81E2244765400F10DD2 /* Social_Map */,
+				78EAF8352244765600F10DD2 /* Social_MapTests */,
+				78EAF8402244765600F10DD2 /* Social_MapUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		78EAF81D2244765400F10DD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78EAF8302244765600F10DD2 /* LaunchScreen.storyboard in Resources */,
+				78EAF82D2244765600F10DD2 /* Assets.xcassets in Resources */,
+				78EAF8282244765400F10DD2 /* Main.storyboard in Resources */,
+				78EAF8542244783E00F10DD2 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78EAF8342244765600F10DD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78EAF8552244783E00F10DD2 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78EAF83F2244765600F10DD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78EAF8562244783E00F10DD2 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		097892A5C86FCBCA2B12707C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Social_Map-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		12F9E7FF5B7FA98980D08A79 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Social_MapUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2FFFE6B7F7D8C8473484B25C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Social_MapTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8EFB25D35980C77BAFE01535 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Social_Map/Pods-Social_Map-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
+				"${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework",
+				"${PODS_ROOT}/SnapSDK/SCSDKBitmojiKit.framework",
+				"${PODS_ROOT}/SnapSDK/SCSDKCoreKit.framework",
+				"${PODS_ROOT}/SnapSDK/SCSDKCreativeKit.framework",
+				"${PODS_ROOT}/SnapSDK/SCSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINOperation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCSDKBitmojiKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCSDKCreativeKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Social_Map/Pods-Social_Map-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		78EAF81B2244765400F10DD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78EAF8252244765400F10DD2 /* ViewController.swift in Sources */,
+				78EAF82B2244765400F10DD2 /* Social_Map.xcdatamodeld in Sources */,
+				78EAF8232244765400F10DD2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78EAF8322244765600F10DD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78EAF83B2244765600F10DD2 /* Social_MapTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78EAF83D2244765600F10DD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78EAF8462244765600F10DD2 /* Social_MapUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		78EAF8382244765600F10DD2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 78EAF81E2244765400F10DD2 /* Social_Map */;
+			targetProxy = 78EAF8372244765600F10DD2 /* PBXContainerItemProxy */;
+		};
+		78EAF8432244765600F10DD2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 78EAF81E2244765400F10DD2 /* Social_Map */;
+			targetProxy = 78EAF8422244765600F10DD2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		78EAF8262244765400F10DD2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78EAF8272244765400F10DD2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		78EAF82E2244765600F10DD2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78EAF82F2244765600F10DD2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		78EAF8482244765600F10DD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		78EAF8492244765600F10DD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		78EAF84B2244765600F10DD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C57A4A024ED68FE25F70480 /* Pods-Social_Map.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RFS3G3N2D4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/SnapSDK",
+				);
+				INFOPLIST_FILE = Social_Map/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.caincomputers.Social-Map";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		78EAF84C2244765600F10DD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD5BE81B8E1F1D480855FF2E /* Pods-Social_Map.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RFS3G3N2D4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/SnapSDK",
+				);
+				INFOPLIST_FILE = Social_Map/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.caincomputers.Social-Map";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		78EAF84E2244765600F10DD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 391218C18A4C8CABD8B44643 /* Pods-Social_MapTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RFS3G3N2D4;
+				INFOPLIST_FILE = Social_MapTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.caincomputers.Social-MapTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Social_Map.app/Social_Map";
+			};
+			name = Debug;
+		};
+		78EAF84F2244765600F10DD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08014D0CC69236B62ED3489B /* Pods-Social_MapTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RFS3G3N2D4;
+				INFOPLIST_FILE = Social_MapTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.caincomputers.Social-MapTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Social_Map.app/Social_Map";
+			};
+			name = Release;
+		};
+		78EAF8512244765600F10DD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4582E7F3CA1AA80E51B31855 /* Pods-Social_MapUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RFS3G3N2D4;
+				INFOPLIST_FILE = Social_MapUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.caincomputers.Social-MapUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Social_Map;
+			};
+			name = Debug;
+		};
+		78EAF8522244765600F10DD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9782F642884C3FAD1A3CB94 /* Pods-Social_MapUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RFS3G3N2D4;
+				INFOPLIST_FILE = Social_MapUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.caincomputers.Social-MapUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Social_Map;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		78EAF81A2244765400F10DD2 /* Build configuration list for PBXProject "Social_Map" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78EAF8482244765600F10DD2 /* Debug */,
+				78EAF8492244765600F10DD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78EAF84A2244765600F10DD2 /* Build configuration list for PBXNativeTarget "Social_Map" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78EAF84B2244765600F10DD2 /* Debug */,
+				78EAF84C2244765600F10DD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78EAF84D2244765600F10DD2 /* Build configuration list for PBXNativeTarget "Social_MapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78EAF84E2244765600F10DD2 /* Debug */,
+				78EAF84F2244765600F10DD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78EAF8502244765600F10DD2 /* Build configuration list for PBXNativeTarget "Social_MapUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78EAF8512244765600F10DD2 /* Debug */,
+				78EAF8522244765600F10DD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		78EAF8292244765400F10DD2 /* Social_Map.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				78EAF82A2244765400F10DD2 /* Social_Map.xcdatamodel */,
+			);
+			currentVersion = 78EAF82A2244765400F10DD2 /* Social_Map.xcdatamodel */;
+			path = Social_Map.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 78EAF8172244765400F10DD2 /* Project object */;
+}

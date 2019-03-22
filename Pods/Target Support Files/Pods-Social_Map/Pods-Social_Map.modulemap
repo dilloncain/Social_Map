@@ -1,0 +1,6 @@
+framework module Pods_Social_Map {
+  umbrella header "Pods-Social_Map-umbrella.h"
+
+  export *
+  module * { export * }
+}
