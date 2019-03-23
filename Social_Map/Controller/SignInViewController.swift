@@ -13,13 +13,26 @@ import Firebase
 import MapKit
 import GeoFire
 
-class SignInViewController: UIViewController {
-
+class SignInViewController: UIViewController, UITextFieldDelegate {
+    
+    
+    @IBOutlet weak var emailField: GreatField!
+    @IBOutlet weak var passwordField: GreatField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        emailField.delegate = self
+        passwordField.delegate = self
         // Do any additional setup after loading the view.
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true
+    }
+    
     
     @IBAction func facebookButtonTapped(_ sender: UIButton) {
         
@@ -56,6 +69,23 @@ class SignInViewController: UIViewController {
             }
             // User is signed in
         })
+    }
+    @IBAction func signInButtonPressed(_ sender: Any) {
+        if let email = emailField.text, let pwd = passwordField.text {
+            Auth.auth().signIn(withEmail: email, password: pwd, completion: { (user, error) in
+                if error == nil {
+                    print("Dillon: Email user authenticated with Firebase")
+                } else {
+                    Auth.auth().createUser(withEmail: email, password: pwd, completion: { (user, error) in
+                        if error != nil {
+                            print("Dillon: Unable to authenticate with Firebase using email")
+                        } else {
+                            print("Dillon: Successfully authenticated with Firebase")
+                        }
+                    })
+                }
+            })
+        }
     }
     
 }
