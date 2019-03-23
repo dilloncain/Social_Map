@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5CD84B3B70CC622F5ADEBE5A /* Pods_Social_Map.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21727BB7ADCD8456E3826CC8 /* Pods_Social_Map.framework */; };
+		09A664369B254A1B097D76D5 /* Pods_Social_MapUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF47DA1F9A5D7E4E9C681CAB /* Pods_Social_MapUITests.framework */; };
+		512EFD7B2B9974D220EEA57E /* Pods_Social_Map.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6179D36D497552CE54083170 /* Pods_Social_Map.framework */; };
+		722CADBAA0070E6E09726B60 /* Pods_Social_MapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BABBCE393DCE2C522D05BEA /* Pods_Social_MapTests.framework */; };
 		78EAF8232244765400F10DD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EAF8222244765400F10DD2 /* AppDelegate.swift */; };
 		78EAF8252244765400F10DD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EAF8242244765400F10DD2 /* ViewController.swift */; };
 		78EAF8282244765400F10DD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78EAF8262244765400F10DD2 /* Main.storyboard */; };
 		78EAF82B2244765400F10DD2 /* Social_Map.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 78EAF8292244765400F10DD2 /* Social_Map.xcdatamodeld */; };
 		78EAF82D2244765600F10DD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78EAF82C2244765600F10DD2 /* Assets.xcassets */; };
 		78EAF8302244765600F10DD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78EAF82E2244765600F10DD2 /* LaunchScreen.storyboard */; };
-		78EAF83B2244765600F10DD2 /* Social_MapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EAF83A2244765600F10DD2 /* Social_MapTests.swift */; };
-		78EAF8462244765600F10DD2 /* Social_MapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EAF8452244765600F10DD2 /* Social_MapUITests.swift */; };
 		78EAF8542244783E00F10DD2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78EAF8532244783E00F10DD2 /* GoogleService-Info.plist */; };
 		78EAF8552244783E00F10DD2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78EAF8532244783E00F10DD2 /* GoogleService-Info.plist */; };
 		78EAF8562244783E00F10DD2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78EAF8532244783E00F10DD2 /* GoogleService-Info.plist */; };
@@ -25,8 +25,6 @@
 		78EAF86D2245746D00F10DD2 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EAF86C2245746D00F10DD2 /* RoundButton.swift */; };
 		78EAF86F224575E900F10DD2 /* GreatField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EAF86E224575E900F10DD2 /* GreatField.swift */; };
 		78EAF8712245778C00F10DD2 /* GreatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EAF8702245778C00F10DD2 /* GreatButton.swift */; };
-		9412F87A8F17D273DA5CDEE1 /* Pods_Social_MapUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FD4AA7F16AAE1C30B69DB14 /* Pods_Social_MapUITests.framework */; };
-		F12E984219B2B70A080B3F5E /* Pods_Social_MapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03ADAD6C357597D467C58CAC /* Pods_Social_MapTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,14 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03ADAD6C357597D467C58CAC /* Pods_Social_MapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Social_MapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		08014D0CC69236B62ED3489B /* Pods-Social_MapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social_MapTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Social_MapTests/Pods-Social_MapTests.release.xcconfig"; sourceTree = "<group>"; };
-		21727BB7ADCD8456E3826CC8 /* Pods_Social_Map.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Social_Map.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2FD4AA7F16AAE1C30B69DB14 /* Pods_Social_MapUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Social_MapUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		391218C18A4C8CABD8B44643 /* Pods-Social_MapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social_MapTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Social_MapTests/Pods-Social_MapTests.debug.xcconfig"; sourceTree = "<group>"; };
-		4582E7F3CA1AA80E51B31855 /* Pods-Social_MapUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social_MapUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Social_MapUITests/Pods-Social_MapUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		4C57A4A024ED68FE25F70480 /* Pods-Social_Map.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social_Map.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Social_Map/Pods-Social_Map.debug.xcconfig"; sourceTree = "<group>"; };
-		784D205800EB6492528756BFA15AAF09 /* SCSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SCSDKLoginKit.framework; sourceTree = "<group>"; };
+		0A407960452C2378E71020FD /* Pods-Social_MapUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social_MapUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Social_MapUITests/Pods-Social_MapUITests.release.xcconfig"; sourceTree = "<group>"; };
+		35044AE87740851ADC607D83 /* Pods-Social_MapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social_MapTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Social_MapTests/Pods-Social_MapTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6179D36D497552CE54083170 /* Pods_Social_Map.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Social_Map.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6839CAB9865DCEE7A33F2BEE /* Pods-Social_MapUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social_MapUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Social_MapUITests/Pods-Social_MapUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		78EAF81F2244765400F10DD2 /* Social_Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Social_Map.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78EAF8222244765400F10DD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78EAF8242244765400F10DD2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,23 +58,20 @@
 		78EAF82F2244765600F10DD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78EAF8312244765600F10DD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78EAF8362244765600F10DD2 /* Social_MapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Social_MapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		78EAF83A2244765600F10DD2 /* Social_MapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Social_MapTests.swift; sourceTree = "<group>"; };
-		78EAF83C2244765600F10DD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78EAF8412244765600F10DD2 /* Social_MapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Social_MapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		78EAF8452244765600F10DD2 /* Social_MapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Social_MapUITests.swift; sourceTree = "<group>"; };
-		78EAF8472244765600F10DD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78EAF8532244783E00F10DD2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		78EAF85722448E4E00F10DD2 /* PINCache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PINCache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78EAF8642244A60C00F10DD2 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		78EAF8672244B5E800F10DD2 /* GreatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreatView.swift; sourceTree = "<group>"; };
 		78EAF86A2244B67200F10DD2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		78EAF86C2245746D00F10DD2 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		78EAF86E224575E900F10DD2 /* GreatField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreatField.swift; sourceTree = "<group>"; };
 		78EAF8702245778C00F10DD2 /* GreatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreatButton.swift; sourceTree = "<group>"; };
-		7D78B7CD32BC4E2836BFD37B6450444F /* SCSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SCSDKCoreKit.framework; sourceTree = "<group>"; };
-		D523193CE8B4EE1363967BDC4C3C97A9 /* SCSDKBitmojiKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SCSDKBitmojiKit.framework; sourceTree = "<group>"; };
-		D9782F642884C3FAD1A3CB94 /* Pods-Social_MapUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social_MapUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Social_MapUITests/Pods-Social_MapUITests.release.xcconfig"; sourceTree = "<group>"; };
-		DD5BE81B8E1F1D480855FF2E /* Pods-Social_Map.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social_Map.release.xcconfig"; path = "Pods/Target Support Files/Pods-Social_Map/Pods-Social_Map.release.xcconfig"; sourceTree = "<group>"; };
+		78EAF8722245B45400F10DD2 /* Social_Map.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Social_Map.entitlements; sourceTree = "<group>"; };
+		910500D45A98A92AC2BD2790 /* Pods-Social_Map.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social_Map.release.xcconfig"; path = "Pods/Target Support Files/Pods-Social_Map/Pods-Social_Map.release.xcconfig"; sourceTree = "<group>"; };
+		9BABBCE393DCE2C522D05BEA /* Pods_Social_MapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Social_MapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B447EF15EA071643A190F452 /* Pods-Social_Map.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social_Map.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Social_Map/Pods-Social_Map.debug.xcconfig"; sourceTree = "<group>"; };
+		BDC3F62773A1FF21C850FBA5 /* Pods-Social_MapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social_MapTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Social_MapTests/Pods-Social_MapTests.release.xcconfig"; sourceTree = "<group>"; };
+		DF47DA1F9A5D7E4E9C681CAB /* Pods_Social_MapUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Social_MapUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CD84B3B70CC622F5ADEBE5A /* Pods_Social_Map.framework in Frameworks */,
+				512EFD7B2B9974D220EEA57E /* Pods_Social_Map.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F12E984219B2B70A080B3F5E /* Pods_Social_MapTests.framework in Frameworks */,
+				722CADBAA0070E6E09726B60 /* Pods_Social_MapTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,34 +95,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9412F87A8F17D273DA5CDEE1 /* Pods_Social_MapUITests.framework in Frameworks */,
+				09A664369B254A1B097D76D5 /* Pods_Social_MapUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		16132AEB9B450FB51D84CE16 /* Frameworks */ = {
+		2CEA4F2748DE2C7FCCF4BC19 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				21727BB7ADCD8456E3826CC8 /* Pods_Social_Map.framework */,
-				03ADAD6C357597D467C58CAC /* Pods_Social_MapTests.framework */,
-				2FD4AA7F16AAE1C30B69DB14 /* Pods_Social_MapUITests.framework */,
+				B447EF15EA071643A190F452 /* Pods-Social_Map.debug.xcconfig */,
+				910500D45A98A92AC2BD2790 /* Pods-Social_Map.release.xcconfig */,
+				35044AE87740851ADC607D83 /* Pods-Social_MapTests.debug.xcconfig */,
+				BDC3F62773A1FF21C850FBA5 /* Pods-Social_MapTests.release.xcconfig */,
+				6839CAB9865DCEE7A33F2BEE /* Pods-Social_MapUITests.debug.xcconfig */,
+				0A407960452C2378E71020FD /* Pods-Social_MapUITests.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		78EAF8162244765400F10DD2 = {
 			isa = PBXGroup;
 			children = (
-				78EAF85722448E4E00F10DD2 /* PINCache.framework */,
 				78EAF8212244765400F10DD2 /* Social_Map */,
-				78EAF8392244765600F10DD2 /* Social_MapTests */,
-				78EAF8442244765600F10DD2 /* Social_MapUITests */,
 				78EAF8202244765400F10DD2 /* Products */,
-				AFD8CFF65B4CC45E92B6234E /* Pods */,
-				16132AEB9B450FB51D84CE16 /* Frameworks */,
-				78EAF8622244916100F10DD2 /* Recovered References */,
+				2CEA4F2748DE2C7FCCF4BC19 /* Pods */,
+				F02E420AE828E454FFB7D750 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,6 +138,7 @@
 		78EAF8212244765400F10DD2 /* Social_Map */ = {
 			isa = PBXGroup;
 			children = (
+				78EAF8722245B45400F10DD2 /* Social_Map.entitlements */,
 				78EAF8692244B65A00F10DD2 /* Utili */,
 				78EAF8632244A51C00F10DD2 /* Controller */,
 				78EAF8662244B59F00F10DD2 /* View */,
@@ -160,34 +151,6 @@
 				78EAF8532244783E00F10DD2 /* GoogleService-Info.plist */,
 			);
 			path = Social_Map;
-			sourceTree = "<group>";
-		};
-		78EAF8392244765600F10DD2 /* Social_MapTests */ = {
-			isa = PBXGroup;
-			children = (
-				78EAF83A2244765600F10DD2 /* Social_MapTests.swift */,
-				78EAF83C2244765600F10DD2 /* Info.plist */,
-			);
-			path = Social_MapTests;
-			sourceTree = "<group>";
-		};
-		78EAF8442244765600F10DD2 /* Social_MapUITests */ = {
-			isa = PBXGroup;
-			children = (
-				78EAF8452244765600F10DD2 /* Social_MapUITests.swift */,
-				78EAF8472244765600F10DD2 /* Info.plist */,
-			);
-			path = Social_MapUITests;
-			sourceTree = "<group>";
-		};
-		78EAF8622244916100F10DD2 /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-				784D205800EB6492528756BFA15AAF09 /* SCSDKLoginKit.framework */,
-				D523193CE8B4EE1363967BDC4C3C97A9 /* SCSDKBitmojiKit.framework */,
-				7D78B7CD32BC4E2836BFD37B6450444F /* SCSDKCoreKit.framework */,
-			);
-			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		78EAF8632244A51C00F10DD2 /* Controller */ = {
@@ -218,17 +181,14 @@
 			path = Utili;
 			sourceTree = "<group>";
 		};
-		AFD8CFF65B4CC45E92B6234E /* Pods */ = {
+		F02E420AE828E454FFB7D750 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4C57A4A024ED68FE25F70480 /* Pods-Social_Map.debug.xcconfig */,
-				DD5BE81B8E1F1D480855FF2E /* Pods-Social_Map.release.xcconfig */,
-				391218C18A4C8CABD8B44643 /* Pods-Social_MapTests.debug.xcconfig */,
-				08014D0CC69236B62ED3489B /* Pods-Social_MapTests.release.xcconfig */,
-				4582E7F3CA1AA80E51B31855 /* Pods-Social_MapUITests.debug.xcconfig */,
-				D9782F642884C3FAD1A3CB94 /* Pods-Social_MapUITests.release.xcconfig */,
+				6179D36D497552CE54083170 /* Pods_Social_Map.framework */,
+				9BABBCE393DCE2C522D05BEA /* Pods_Social_MapTests.framework */,
+				DF47DA1F9A5D7E4E9C681CAB /* Pods_Social_MapUITests.framework */,
 			);
-			name = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +263,11 @@
 				TargetAttributes = {
 					78EAF81E2244765400F10DD2 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					78EAF8352244765600F10DD2 = {
 						CreatedOnToolsVersion = 10.1;
@@ -440,6 +405,10 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Social_Map/Pods-Social_Map-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
 				"${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework",
@@ -454,6 +423,10 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINOperation.framework",
@@ -492,7 +465,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78EAF83B2244765600F10DD2 /* Social_MapTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,7 +472,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78EAF8462244765600F10DD2 /* Social_MapUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -657,9 +628,10 @@
 		};
 		78EAF84B2244765600F10DD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C57A4A024ED68FE25F70480 /* Pods-Social_Map.debug.xcconfig */;
+			baseConfigurationReference = B447EF15EA071643A190F452 /* Pods-Social_Map.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Social_Map/Social_Map.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RFS3G3N2D4;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -680,9 +652,10 @@
 		};
 		78EAF84C2244765600F10DD2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD5BE81B8E1F1D480855FF2E /* Pods-Social_Map.release.xcconfig */;
+			baseConfigurationReference = 910500D45A98A92AC2BD2790 /* Pods-Social_Map.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Social_Map/Social_Map.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RFS3G3N2D4;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -694,6 +667,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.caincomputers.Social-Map";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -703,7 +677,7 @@
 		};
 		78EAF84E2244765600F10DD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 391218C18A4C8CABD8B44643 /* Pods-Social_MapTests.debug.xcconfig */;
+			baseConfigurationReference = 35044AE87740851ADC607D83 /* Pods-Social_MapTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -725,7 +699,7 @@
 		};
 		78EAF84F2244765600F10DD2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 08014D0CC69236B62ED3489B /* Pods-Social_MapTests.release.xcconfig */;
+			baseConfigurationReference = BDC3F62773A1FF21C850FBA5 /* Pods-Social_MapTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -747,7 +721,7 @@
 		};
 		78EAF8512244765600F10DD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4582E7F3CA1AA80E51B31855 /* Pods-Social_MapUITests.debug.xcconfig */;
+			baseConfigurationReference = 6839CAB9865DCEE7A33F2BEE /* Pods-Social_MapUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -768,7 +742,7 @@
 		};
 		78EAF8522244765600F10DD2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D9782F642884C3FAD1A3CB94 /* Pods-Social_MapUITests.release.xcconfig */;
+			baseConfigurationReference = 0A407960452C2378E71020FD /* Pods-Social_MapUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
