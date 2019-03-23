@@ -8,7 +8,8 @@ target 'Social_Map' do
   pod 'SnapSDK'
   pod 'FBSDKLoginKit', '4.38.1'
   pod 'FBSDKCoreKit', '4.38.1'
-
+  pod 'SwiftKeychainWrapper'
+  
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 

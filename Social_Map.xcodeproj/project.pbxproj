@@ -11,7 +11,6 @@
 		512EFD7B2B9974D220EEA57E /* Pods_Social_Map.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6179D36D497552CE54083170 /* Pods_Social_Map.framework */; };
 		722CADBAA0070E6E09726B60 /* Pods_Social_MapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BABBCE393DCE2C522D05BEA /* Pods_Social_MapTests.framework */; };
 		78EAF8232244765400F10DD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EAF8222244765400F10DD2 /* AppDelegate.swift */; };
-		78EAF8252244765400F10DD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EAF8242244765400F10DD2 /* ViewController.swift */; };
 		78EAF8282244765400F10DD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78EAF8262244765400F10DD2 /* Main.storyboard */; };
 		78EAF82B2244765400F10DD2 /* Social_Map.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 78EAF8292244765400F10DD2 /* Social_Map.xcdatamodeld */; };
 		78EAF82D2244765600F10DD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78EAF82C2244765600F10DD2 /* Assets.xcassets */; };
@@ -25,6 +24,7 @@
 		78EAF86D2245746D00F10DD2 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EAF86C2245746D00F10DD2 /* RoundButton.swift */; };
 		78EAF86F224575E900F10DD2 /* GreatField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EAF86E224575E900F10DD2 /* GreatField.swift */; };
 		78EAF8712245778C00F10DD2 /* GreatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EAF8702245778C00F10DD2 /* GreatButton.swift */; };
+		78FB1F82224612E2008A4DF3 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FB1F81224612E2008A4DF3 /* FeedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +51,6 @@
 		6839CAB9865DCEE7A33F2BEE /* Pods-Social_MapUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social_MapUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Social_MapUITests/Pods-Social_MapUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		78EAF81F2244765400F10DD2 /* Social_Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Social_Map.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78EAF8222244765400F10DD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		78EAF8242244765400F10DD2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		78EAF8272244765400F10DD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		78EAF82A2244765400F10DD2 /* Social_Map.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Social_Map.xcdatamodel; sourceTree = "<group>"; };
 		78EAF82C2244765600F10DD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,6 +66,7 @@
 		78EAF86E224575E900F10DD2 /* GreatField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreatField.swift; sourceTree = "<group>"; };
 		78EAF8702245778C00F10DD2 /* GreatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreatButton.swift; sourceTree = "<group>"; };
 		78EAF8722245B45400F10DD2 /* Social_Map.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Social_Map.entitlements; sourceTree = "<group>"; };
+		78FB1F81224612E2008A4DF3 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		910500D45A98A92AC2BD2790 /* Pods-Social_Map.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social_Map.release.xcconfig"; path = "Pods/Target Support Files/Pods-Social_Map/Pods-Social_Map.release.xcconfig"; sourceTree = "<group>"; };
 		9BABBCE393DCE2C522D05BEA /* Pods_Social_MapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Social_MapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B447EF15EA071643A190F452 /* Pods-Social_Map.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social_Map.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Social_Map/Pods-Social_Map.debug.xcconfig"; sourceTree = "<group>"; };
@@ -156,8 +156,8 @@
 		78EAF8632244A51C00F10DD2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				78EAF8242244765400F10DD2 /* ViewController.swift */,
 				78EAF8642244A60C00F10DD2 /* SignInViewController.swift */,
+				78FB1F81224612E2008A4DF3 /* FeedViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -416,6 +416,7 @@
 				"${PODS_ROOT}/SnapSDK/SCSDKCoreKit.framework",
 				"${PODS_ROOT}/SnapSDK/SCSDKCreativeKit.framework",
 				"${PODS_ROOT}/SnapSDK/SCSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -434,6 +435,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCSDKCreativeKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -450,7 +452,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78EAF8652244A60C00F10DD2 /* SignInViewController.swift in Sources */,
-				78EAF8252244765400F10DD2 /* ViewController.swift in Sources */,
+				78FB1F82224612E2008A4DF3 /* FeedViewController.swift in Sources */,
 				78EAF86F224575E900F10DD2 /* GreatField.swift in Sources */,
 				78EAF86D2245746D00F10DD2 /* RoundButton.swift in Sources */,
 				78EAF82B2244765400F10DD2 /* Social_Map.xcdatamodeld in Sources */,

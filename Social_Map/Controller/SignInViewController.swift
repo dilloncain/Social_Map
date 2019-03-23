@@ -12,6 +12,7 @@ import FBSDKLoginKit
 import Firebase
 import MapKit
 import GeoFire
+import SwiftKeychainWrapper
 
 class SignInViewController: UIViewController, UITextFieldDelegate {
     
@@ -25,12 +26,24 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         emailField.delegate = self
         passwordField.delegate = self
         // Do any additional setup after loading the view.
+        // Can't perform segue's in viewDidLoad
     }
+    
+
+    override func viewDidAppear(_ animated: Bool) {
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
+            print("Dillon: ID found in keychain")
+            performSegue(withIdentifier: "goToFeedViewController", sender: nil)
+            // checks for present key
+        }
+    }
+    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         
         return true
+        // On keyboard return, the keyboard will go away to see text fields
     }
     
     
@@ -61,31 +74,47 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     }
     
     func firebaseAuth(_ credential: AuthCredential) {
-        Auth.auth().signInAndRetrieveData(with: credential, completion: { (user, error) in
+        Auth.auth().signInAndRetrieveData(with: credential, completion: { (authDataResult, error) in
             if error != nil {
                 print("Dillon: Unable to authenticate with Firebase - \(error)")
             } else {
                 print("Dillon: Successfully authenticated with Firebase")
+                if let authDataResult = authDataResult {
+                    self.completeSignIn(id: authDataResult.user.uid)
+
+                }
             }
             // User is signed in
         })
     }
     @IBAction func signInButtonPressed(_ sender: Any) {
         if let email = emailField.text, let pwd = passwordField.text {
-            Auth.auth().signIn(withEmail: email, password: pwd, completion: { (user, error) in
+            Auth.auth().signIn(withEmail: email, password: pwd, completion: { (authDataResult, error) in
                 if error == nil {
                     print("Dillon: Email user authenticated with Firebase")
+                    if let authDataResult = authDataResult {
+                        self.completeSignIn(id: (authDataResult.user.uid))
+                    }
                 } else {
-                    Auth.auth().createUser(withEmail: email, password: pwd, completion: { (user, error) in
+                    Auth.auth().createUser(withEmail: email, password: pwd, completion: { (authDataResult, error) in
                         if error != nil {
                             print("Dillon: Unable to authenticate with Firebase using email")
                         } else {
                             print("Dillon: Successfully authenticated with Firebase")
+                            if let authDataResult = authDataResult {
+                                self.completeSignIn(id: (authDataResult.user.uid))
+                            }
                         }
                     })
                 }
             })
         }
+    }
+    
+    func completeSignIn(id: String) {
+        let keyChainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
+        print("Dillon: Data saved to keychain \(keyChainResult)")
+        performSegue(withIdentifier: "goToFeedViewController", sender: nil)
     }
     
 }

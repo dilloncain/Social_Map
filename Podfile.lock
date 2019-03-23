@@ -89,6 +89,7 @@ PODS:
     - PINOperation (~> 1.1)
   - SnapSDK/SCSDKCreativeKit (1.2.0)
   - SnapSDK/SCSDKLoginKit (1.2.0)
+  - SwiftKeychainWrapper (3.2.0)
 
 DEPENDENCIES:
   - FBSDKCoreKit (= 4.38.1)
@@ -97,6 +98,7 @@ DEPENDENCIES:
   - Firebase/Core
   - GeoFire (from `https://github.com/firebase/geofire-objc.git`)
   - SnapSDK
+  - SwiftKeychainWrapper
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -118,6 +120,7 @@ SPEC REPOS:
     - PINCache
     - PINOperation
     - SnapSDK
+    - SwiftKeychainWrapper
 
 EXTERNAL SOURCES:
   GeoFire:
@@ -148,7 +151,8 @@ SPEC CHECKSUMS:
   PINCache: ce36ed282031b92fc7733ffe831f474ff80fddc2
   PINOperation: a6219e6fc9db9c269eb7a7b871ac193bcf400aac
   SnapSDK: c71296609cc8ed78b79cf202a70acf939fbf2fc3
+  SwiftKeychainWrapper: 82c4c02cdc36f9a24f7edfcaab3e336401caa1a1
 
-PODFILE CHECKSUM: 33009a838a54ab318673e2bf08b1dc3d0fcc91bb
+PODFILE CHECKSUM: 274ec73dbae14bb9629469977708f27c1319a78a
 
 COCOAPODS: 1.5.3
