@@ -80,7 +80,8 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
             } else {
                 print("Dillon: Successfully authenticated with Firebase")
                 if let authDataResult = authDataResult {
-                    self.completeSignIn(id: authDataResult.user.uid)
+                    let userData = ["provider": credential.provider]
+                    self.completeSignIn(id: authDataResult.user.uid, userData: userData)
 
                 }
             }
@@ -93,7 +94,8 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
                 if error == nil {
                     print("Dillon: Email user authenticated with Firebase")
                     if let authDataResult = authDataResult {
-                        self.completeSignIn(id: (authDataResult.user.uid))
+                        let userData = ["provider": authDataResult.user.providerID]
+                        self.completeSignIn(id: authDataResult.user.uid, userData: userData)
                     }
                 } else {
                     Auth.auth().createUser(withEmail: email, password: pwd, completion: { (authDataResult, error) in
@@ -102,7 +104,8 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
                         } else {
                             print("Dillon: Successfully authenticated with Firebase")
                             if let authDataResult = authDataResult {
-                                self.completeSignIn(id: (authDataResult.user.uid))
+                                let userData = ["provider": authDataResult.user.providerID]
+                                self.completeSignIn(id: authDataResult.user.uid, userData: userData)
                             }
                         }
                     })
@@ -111,7 +114,9 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func completeSignIn(id: String) {
+    func completeSignIn(id: String, userData: Dictionary<String, String>) {
+        DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
+        // Creating firebase user in database
         let keyChainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
         print("Dillon: Data saved to keychain \(keyChainResult)")
         performSegue(withIdentifier: "goToFeedViewController", sender: nil)
