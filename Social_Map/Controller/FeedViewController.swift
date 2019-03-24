@@ -10,11 +10,13 @@ import UIKit
 import SwiftKeychainWrapper
 import Firebase
 
-class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
+class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var imageAdd: UIImageView!
     
     var posts = [Post]()
+    var imagePicker: UIImagePickerController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +25,13 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.dataSource = self
         // Do any additional setup after loading the view.
         
+        imagePicker = UIImagePickerController()
+        // Initializes imagePicker
+        imagePicker.allowsEditing = true
+        // Allows to crops and basic editing
+        imagePicker.delegate = self
+        
+        // =====================================================================
         // Initializes listener
         DataService.ds.REF_POSTS.observe(.value) { (snapshot) in
             //print(snapshot.value)
@@ -59,6 +68,22 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             return PostTableViewCell()
         }
     }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            imageAdd.image = image
+        } else {
+            print("Dillon: A valid image wasn't selected")
+        }
+        imagePicker.dismiss(animated: true, completion: nil)
+        // Once image is selected gets rid of image picker
+    }
+    
+    
+    @IBAction func addImageTapped(_ sender: Any) {
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
     
     @IBAction func signOutTapped(_ sender: Any) {
         // blank canvas... remove keychain and firebase id
