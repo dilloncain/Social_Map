@@ -17,11 +17,19 @@ import CoreLocation
 class MapViewController: UIViewController, UIGestureRecognizerDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
-
+    @IBOutlet weak var pullUpView: UIView!
+    @IBOutlet weak var pullUpViewHeightConstraint: NSLayoutConstraint!
+    
 
     var locationManager = CLLocationManager()
     let authorizationStatus = CLLocationManager.authorizationStatus()
     let regionRadius: Double = 1000
+    
+    var screenSize = UIScreen.main.bounds
+    
+    var spinner: UIActivityIndicatorView?
+    var progressLabel: UILabel?
+    
     //var mapHasCenteredOnce = false
     
     //var geoFire: GeoFire!
@@ -47,6 +55,35 @@ class MapViewController: UIViewController, UIGestureRecognizerDelegate {
         doubleTap.numberOfTapsRequired = 2
         doubleTap.delegate = self
         mapView.addGestureRecognizer(doubleTap)
+    }
+    
+    func addSwipe() {
+        let swipe = UISwipeGestureRecognizer(target: self, action: #selector(animateViewDown))
+        swipe.direction = .down
+        pullUpView.addGestureRecognizer(swipe)
+    }
+    
+    func animateViewUp() {
+        pullUpViewHeightConstraint.constant = 300
+        UIView.animate(withDuration: 0.3) {
+        self.view.layoutIfNeeded()
+        }
+    }
+    
+    func addSpinner() {
+        spinner = UIActivityIndicatorView()
+        spinner?.center = CGPoint(x: (screenSize.width / 2) - (spinner?.frame.width)!, y: 150)
+        spinner?.style = .whiteLarge
+        spinner?.color = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        spinner?.startAnimating()
+        pullUpView.addSubview(spinner!)
+    }
+    
+    @objc func animateViewDown() {
+        pullUpViewHeightConstraint.constant = 0
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -91,6 +128,9 @@ extension MapViewController: MKMapViewDelegate {
     @objc func dropPin(sender: UITapGestureRecognizer) {
         // drop pin on map
         removePin()
+        animateViewUp()
+        addSwipe()
+        addSpinner()
         
         let touchPoint = sender.location(in: mapView)
         let touchCoordinate = mapView.convert(touchPoint, toCoordinateFrom: mapView)
