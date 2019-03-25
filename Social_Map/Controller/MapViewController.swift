@@ -12,15 +12,17 @@ import Firebase
 import FirebaseDatabase
 import Alamofire
 import AlamofireImage
+import CoreLocation
 
-class MapViewController: UIViewController, CLLocationManagerDelegate {
+class MapViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
 
 
-
     var locationManager = CLLocationManager()
-    var mapHasCenteredOnce = false
+    let authorizationStatus = CLLocationManager.authorizationStatus()
+    let regionRadius: Double = 1000
+    //var mapHasCenteredOnce = false
     
     //var geoFire: GeoFire!
     //var geoFireRef: DatabaseReference!
@@ -29,6 +31,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
 
         mapView.delegate = self
+        locationManager.delegate = self
+        configureLocationServices()
         mapView.userTrackingMode = MKUserTrackingMode.follow
         // Do any additional setup after loading the view.
 
@@ -42,6 +46,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
 
     
     @IBAction func centerMapButtonPressed(_ sender: Any) {
+        if authorizationStatus == .authorizedAlways || authorizationStatus == .authorizedWhenInUse {
+            centerMapOnUserLocation()
+        }
     }
     
     
@@ -54,9 +61,29 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
 }
 
 extension MapViewController: MKMapViewDelegate {
-
- 
+    func centerMapOnUserLocation() {
+        guard let coordinate = locationManager.location?.coordinate else { return }
+        let coordinateRegion = MKCoordinateRegion(center: coordinate, latitudinalMeters: regionRadius * 2.0, longitudinalMeters: regionRadius * 2.0)
+        mapView.setRegion(coordinateRegion, animated: true)
+    }
 }
+
+extension MapViewController: CLLocationManagerDelegate {
+    func configureLocationServices() {
+        if authorizationStatus == .notDetermined {
+            locationManager.requestAlwaysAuthorization()
+        } else {
+            return
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        centerMapOnUserLocation()
+    }
+}
+
+
+
 
 
 //
