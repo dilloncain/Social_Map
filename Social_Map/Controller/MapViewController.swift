@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import Firebase
+import FirebaseDatabase
 
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
@@ -17,6 +18,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     let locationManager = CLLocationManager()
     var mapHasCenteredOnce = false
     var geoFire: GeoFire!
+    var geoFireRef: DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +26,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         mapView.delegate = self
         mapView.userTrackingMode = MKUserTrackingMode.follow
         // Do any additional setup after loading the view.
+        
+        geoFireRef = Database.database().reference()
+        geoFire = GeoFire(firebaseRef: geoFireRef)
+        
     }
     override func viewDidAppear(_ animated: Bool) {
         locationAuthStatus()
@@ -72,7 +78,31 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 //        }
 //    }
     
+    func createSighting(forLocation location: CLLocation, withEvents eventId: Int) {
+        
+        geoFire.setLocation(location, forKey: "\(eventId)")
+        // Creates event
+    }
+    
+    func showEventsOnMap(location: CLLocation) {
+        let circleQuery = geoFire!.query(at: location, withRadius: 2.5)
+        
+        _ = circleQuery.observe(GFEventType.keyEntered, with: {
+            (key, location) in
+        
+            if let key = key, let location = location {
+                let anno = EventAnnotation(coordinate: location, eventNumber: Int(key)!)
+            self.mapView.addAnnotation(anno)
+            }
+        })
+    }
+    
     @IBAction func spotRandomEvents(_ sender: Any) {
+        
+        let loc = CLLocation(latitude: mapView.centerCoordinate.latitude, longitude: mapView.centerCoordinate.longitude)
+        
+        let rand = Int.random(in: 0...151) + 1
+        createSighting(forLocation: loc, withEvents: Int(rand))
         
     }
     

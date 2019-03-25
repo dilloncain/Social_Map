@@ -35,6 +35,7 @@
 		78FB1FBA22484DA4008A4DF3 /* GFGeoHashQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FB1FB022484DA4008A4DF3 /* GFGeoHashQuery.m */; };
 		78FB1FBB22484DA4008A4DF3 /* GFQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FB1FB122484DA4008A4DF3 /* GFQuery.m */; };
 		78FB1FBC22484DA4008A4DF3 /* GFGeoHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FB1FB222484DA4008A4DF3 /* GFGeoHash.m */; };
+		78FB1FC122486792008A4DF3 /* EventAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FB1FC022486792008A4DF3 /* EventAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		78FB1FB622484DA4008A4DF3 /* GFQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFQuery.h; sourceTree = "<group>"; };
 		78FB1FB722484DA4008A4DF3 /* GFCircleQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFCircleQuery.h; sourceTree = "<group>"; };
 		78FB1FBF22484EB1008A4DF3 /* Map-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Map-Bridging-Header.h"; sourceTree = "<group>"; };
+		78FB1FC022486792008A4DF3 /* EventAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAnnotation.swift; sourceTree = "<group>"; };
 		910500D45A98A92AC2BD2790 /* Pods-Social_Map.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social_Map.release.xcconfig"; path = "Pods/Target Support Files/Pods-Social_Map/Pods-Social_Map.release.xcconfig"; sourceTree = "<group>"; };
 		9BABBCE393DCE2C522D05BEA /* Pods_Social_MapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Social_MapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B447EF15EA071643A190F452 /* Pods-Social_Map.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social_Map.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Social_Map/Pods-Social_Map.debug.xcconfig"; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				78FB1F8B22474DA5008A4DF3 /* Post.swift */,
+				78FB1FC022486792008A4DF3 /* EventAnnotation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -556,6 +559,7 @@
 				78EAF8712245778C00F10DD2 /* GreatButton.swift in Sources */,
 				78FB1F842246DA6E008A4DF3 /* CircleView.swift in Sources */,
 				78FB1FBC22484DA4008A4DF3 /* GFGeoHash.m in Sources */,
+				78FB1FC122486792008A4DF3 /* EventAnnotation.swift in Sources */,
 				78EAF8232244765400F10DD2 /* AppDelegate.swift in Sources */,
 				78FB1FB822484DA4008A4DF3 /* GFBase32Utils.m in Sources */,
 				78EAF8682244B5E800F10DD2 /* GreatView.swift in Sources */,
