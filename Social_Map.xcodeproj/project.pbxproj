@@ -153,6 +153,7 @@
 			children = (
 				78EAF8212244765400F10DD2 /* Social_Map */,
 				78EAF8202244765400F10DD2 /* Products */,
+				78FB1FA622484DA4008A4DF3 /* GeoFire */,
 				2CEA4F2748DE2C7FCCF4BC19 /* Pods */,
 				F02E420AE828E454FFB7D750 /* Frameworks */,
 			);
@@ -171,11 +172,11 @@
 		78EAF8212244765400F10DD2 /* Social_Map */ = {
 			isa = PBXGroup;
 			children = (
-				78FB1FA622484DA4008A4DF3 /* GeoFire */,
+				78FB1FC2224884F3008A4DF3 /* Extensions */,
 				78FB1F8A22474D82008A4DF3 /* Model */,
 				78FB1F8722473CFB008A4DF3 /* Services */,
 				78EAF8722245B45400F10DD2 /* Social_Map.entitlements */,
-				78EAF8692244B65A00F10DD2 /* Utili */,
+				78EAF8692244B65A00F10DD2 /* Utilities */,
 				78EAF8632244A51C00F10DD2 /* Controller */,
 				78EAF8662244B59F00F10DD2 /* View */,
 				78EAF8262244765400F10DD2 /* Main.storyboard */,
@@ -213,12 +214,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		78EAF8692244B65A00F10DD2 /* Utili */ = {
+		78EAF8692244B65A00F10DD2 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				78EAF86A2244B67200F10DD2 /* Constants.swift */,
 			);
-			path = Utili;
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		78FB1F8722473CFB008A4DF3 /* Services */ = {
@@ -274,6 +275,13 @@
 				78FB1FB722484DA4008A4DF3 /* GFCircleQuery.h */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		78FB1FC2224884F3008A4DF3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		F02E420AE828E454FFB7D750 /* Frameworks */ = {
@@ -500,6 +508,8 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Social_Map/Pods-Social_Map-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
@@ -519,6 +529,8 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",

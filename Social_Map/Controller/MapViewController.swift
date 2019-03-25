@@ -10,113 +10,152 @@ import UIKit
 import MapKit
 import Firebase
 import FirebaseDatabase
+import Alamofire
+import AlamofireImage
 
-class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class MapViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
-    
-    let locationManager = CLLocationManager()
+
+
+
+    var locationManager = CLLocationManager()
     var mapHasCenteredOnce = false
-    var geoFire: GeoFire!
-    var geoFireRef: DatabaseReference!
     
+    //var geoFire: GeoFire!
+    //var geoFireRef: DatabaseReference!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         mapView.delegate = self
         mapView.userTrackingMode = MKUserTrackingMode.follow
         // Do any additional setup after loading the view.
-        
-        geoFireRef = Database.database().reference()
-        geoFire = GeoFire(firebaseRef: geoFireRef)
-        
+
+        //geoFireRef = Database.database().reference()
+        //geoFire = GeoFire(firebaseRef: geoFireRef)
+
     }
     override func viewDidAppear(_ animated: Bool) {
-        locationAuthStatus()
-    }
-    
-    func locationAuthStatus() {
-        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
-            // Important so you dont drain the users battery when not in use
-            mapView.showsUserLocation = true
-        } else {
-            locationManager.requestWhenInUseAuthorization()
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         
-        if status == CLAuthorizationStatus.authorizedWhenInUse {
-            mapView.showsUserLocation = true
-        }
+    }
+
+    
+    @IBAction func centerMapButtonPressed(_ sender: Any) {
     }
     
-    func centerMapOnLocation(location: CLLocation) {
-        let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 2000, longitudinalMeters: 2000)
-        
-        mapView.setRegion(coordinateRegion, animated: true)
-    }
     
-    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
-        
-        if let loc = userLocation.location {
-            
-            if !mapHasCenteredOnce {
-                centerMapOnLocation(location: loc)
-                mapHasCenteredOnce = true
-            }
-        }
-    }
     
+    
+ @IBAction func mapBackButtonTapped(_ sender: Any) {
+ performSegue(withIdentifier: "goBackToFeedViewController", sender: nil)
+ }
+    
+}
+
+extension MapViewController: MKMapViewDelegate {
+
+ 
+}
+
+
+//
+//    func locationAuthStatus() {
+//        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+//            // Important so you dont drain the users battery when not in use
+//            mapView.showsUserLocation = true
+//        } else {
+//            locationManager.requestWhenInUseAuthorization()
+//        }
+//    }
+//
+//    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+//
+//        if status == CLAuthorizationStatus.authorizedWhenInUse {
+//            mapView.showsUserLocation = true
+//        }
+//    }
+//
+//    func centerMapOnLocation(location: CLLocation) {
+//        let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 2000, longitudinalMeters: 2000)
+//
+//        mapView.setRegion(coordinateRegion, animated: true)
+//    }
+//
+//    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+//
+//        if let loc = userLocation.location {
+//
+//            if !mapHasCenteredOnce {
+//                centerMapOnLocation(location: loc)
+//                mapHasCenteredOnce = true
+//            }
+//        }
+//    }
+//
 //    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
 //
+//        let annoIdentifier = "Event"
 //        var annotationView: MKAnnotationView?
 //
 //        if annotation.isKind(of: MKUserLocation.self) {
 //            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "User")
 //            annotationView?.image = UIImage(named: "bitMojiTemplate")
+//        } else if var deqAnno = mapView.dequeueReusableAnnotationView(withIdentifier: annoIdentifier) {
+//            annotationView = deqAnno
+//            annotationView?.annotation = annotation
+//        } else {
+//            var av = MKAnnotationView(annotation: annotation, reuseIdentifier: annoIdentifier)
+//            av.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+//            annotation = av
 //        }
+//
+//        if let annotationView = annotationView, let anno = annotation
+//            as? EventAnnotation {
+//
+//            annotationView.canShowCallout = true
+//            annotationView.image = UIImage(named: "\(anno.eventNumber)")
+//            let button = UIButton()
+//            button.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+//            button.setImage(UIImage(named: "map"), for: .normal)
+//            annotationView.rightCalloutAccessoryView = button
+//        }
+//
+//        return annotationView
 //    }
-    
-    func createSighting(forLocation location: CLLocation, withEvents eventId: Int) {
-        
-        geoFire.setLocation(location, forKey: "\(eventId)")
-        // Creates event
-    }
-    
-    func showEventsOnMap(location: CLLocation) {
-        let circleQuery = geoFire!.query(at: location, withRadius: 2.5)
-        
-        _ = circleQuery.observe(GFEventType.keyEntered, with: {
-            (key, location) in
-        
-            if let key = key, let location = location {
-                let anno = EventAnnotation(coordinate: location, eventNumber: Int(key)!)
-            self.mapView.addAnnotation(anno)
-            }
-        })
-    }
-    
-    @IBAction func spotRandomEvents(_ sender: Any) {
-        
-        let loc = CLLocation(latitude: mapView.centerCoordinate.latitude, longitude: mapView.centerCoordinate.longitude)
-        
-        let rand = Int.random(in: 0...151) + 1
-        createSighting(forLocation: loc, withEvents: Int(rand))
-        
-    }
-    
-    @IBAction func mapBackButtonTapped(_ sender: Any) {
-        performSegue(withIdentifier: "goBackToFeedViewController", sender: nil)
-    }
-    /*
-    // MARK: - Navigation
+//
+//    func createSighting(forLocation location: CLLocation, withEvents eventId: Int) {
+//
+//        geoFire.setLocation(location, forKey: "\(eventId)")
+//        // Creates event
+//    }
+//
+//    func showEventsOnMap(location: CLLocation) {
+//        let circleQuery = geoFire!.query(at: location, withRadius: 2.5)
+//
+//        _ = circleQuery.observe(GFEventType.keyEntered, with: {
+//            (key, location) in
+//
+//            //if let key = key, let location = location {
+//                let anno = EventAnnotation(coordinate: location, eventNumber: Int(key)!)
+//                self.mapView.addAnnotation(anno)
+//            //}
+//        })
+//    }
+//
+//    @IBAction func spotRandomEvents(_ sender: Any) {
+//
+//        let loc = CLLocation(latitude: mapView.centerCoordinate.latitude, longitude: mapView.centerCoordinate.longitude)
+//
+//        let rand = Int.random(in: 0...151) + 1
+//        createSighting(forLocation: loc, withEvents: Int(rand))
+//
+//    }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
-}
+
+
+
+
+
+

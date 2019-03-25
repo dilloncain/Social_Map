@@ -1,4 +1,7 @@
 PODS:
+  - Alamofire (4.8.0)
+  - AlamofireImage (3.5.0):
+    - Alamofire (~> 4.8)
   - Bolts (1.9.0):
     - Bolts/AppLinks (= 1.9.0)
     - Bolts/Tasks (= 1.9.0)
@@ -97,6 +100,8 @@ PODS:
   - SwiftKeychainWrapper (3.2.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.4)
+  - AlamofireImage (~> 3.5)
   - FBSDKCoreKit (= 4.38.1)
   - FBSDKLoginKit (= 4.38.1)
   - Firebase/Auth
@@ -108,6 +113,8 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireImage
     - Bolts
     - FBSDKCoreKit
     - FBSDKLoginKit
@@ -130,6 +137,8 @@ SPEC REPOS:
     - SwiftKeychainWrapper
 
 SPEC CHECKSUMS:
+  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  AlamofireImage: 1aea346f4dda2f6c67622fa5a89fcbb80d79cc16
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   FBSDKCoreKit: 8d47857400e2f5bdea697a80daff882e91c84ef6
   FBSDKLoginKit: 4621c690d9dd8628031a4791497062183ea34b0d
@@ -151,6 +160,6 @@ SPEC CHECKSUMS:
   SnapSDK: c71296609cc8ed78b79cf202a70acf939fbf2fc3
   SwiftKeychainWrapper: 82c4c02cdc36f9a24f7edfcaab3e336401caa1a1
 
-PODFILE CHECKSUM: 3d04c0f04c3372d967e3d8857a3a95e8d9838042
+PODFILE CHECKSUM: caf4a0f5915773212e32b6892032570670c32a15
 
 COCOAPODS: 1.5.3
