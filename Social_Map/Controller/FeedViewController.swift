@@ -17,6 +17,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
+    static var imageCache: NSCache<NSString, UIImage> = NSCache()
+    //static var imageCache: NSCache<NSString, UIImage> = NSCache()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,7 +64,14 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let post = posts[indexPath.row]
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "PostTableViewCell") as? PostTableViewCell {
-            cell.configureCell(post: post)
+
+            if let img = FeedViewController.imageCache.object(forKey: post.imageUrl as NSString) { // as NSString added, remove if error
+                cell.configureCell(post: post, img: img)
+                //return cell
+            } else {
+                cell.configureCell(post: post)
+                //return cell
+            }
             return cell
         } else {
             return PostTableViewCell()
@@ -93,6 +102,9 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         performSegue(withIdentifier: "goToSignIn", sender: nil)
     }
     
+    @IBAction func mapViewTapped(_ sender: Any){
+        performSegue(withIdentifier: "goToMapViewController", sender: nil)
+    }
     /*
     // MARK: - Navigation
 

@@ -11,7 +11,7 @@ import FBSDKCoreKit
 import FBSDKLoginKit
 import Firebase
 import MapKit
-import GeoFire
+//import GeoFire
 import SwiftKeychainWrapper
 
 class SignInViewController: UIViewController, UITextFieldDelegate {

@@ -3,8 +3,9 @@
 
 target 'Social_Map' do
   pod 'Firebase/Core'
+  pod 'Firebase/Storage'
   pod 'Firebase/Auth'
-  pod ‘GeoFire’, :git => ‘https://github.com/firebase/geofire-objc.git'
+  pod 'Firebase/Database'
   pod 'SnapSDK'
   pod 'FBSDKLoginKit', '4.38.1'
   pod 'FBSDKCoreKit', '4.38.1'

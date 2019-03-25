@@ -20,6 +20,9 @@ PODS:
   - Firebase/Database (5.15.0):
     - Firebase/CoreOnly
     - FirebaseDatabase (= 5.0.4)
+  - Firebase/Storage (5.15.0):
+    - Firebase/CoreOnly
+    - FirebaseStorage (= 3.0.3)
   - FirebaseAnalytics (5.4.0):
     - FirebaseCore (~> 5.1)
     - FirebaseInstanceID (~> 3.3)
@@ -45,8 +48,10 @@ PODS:
     - FirebaseCore (~> 5.1)
     - GoogleUtilities/Environment (~> 5.3)
     - GoogleUtilities/UserDefaults (~> 5.3)
-  - GeoFire (3.0.0):
-    - Firebase/Database (~> 5.0)
+  - FirebaseStorage (3.0.3):
+    - FirebaseAuthInterop (~> 1.0)
+    - FirebaseCore (~> 5.1)
+    - GTMSessionFetcher/Core (~> 1.1)
   - GoogleAppMeasurement (5.4.0):
     - GoogleUtilities/AppDelegateSwizzler (~> 5.2)
     - GoogleUtilities/MethodSwizzler (~> 5.2)
@@ -96,7 +101,8 @@ DEPENDENCIES:
   - FBSDKLoginKit (= 4.38.1)
   - Firebase/Auth
   - Firebase/Core
-  - GeoFire (from `https://github.com/firebase/geofire-objc.git`)
+  - Firebase/Database
+  - Firebase/Storage
   - SnapSDK
   - SwiftKeychainWrapper
 
@@ -112,6 +118,7 @@ SPEC REPOS:
     - FirebaseCore
     - FirebaseDatabase
     - FirebaseInstanceID
+    - FirebaseStorage
     - GoogleAppMeasurement
     - GoogleUtilities
     - GTMSessionFetcher
@@ -121,15 +128,6 @@ SPEC REPOS:
     - PINOperation
     - SnapSDK
     - SwiftKeychainWrapper
-
-EXTERNAL SOURCES:
-  GeoFire:
-    :git: https://github.com/firebase/geofire-objc.git
-
-CHECKOUT OPTIONS:
-  GeoFire:
-    :commit: 95a0bf39b1bcc87685dc7aba3caf4e23d9600c30
-    :git: https://github.com/firebase/geofire-objc.git
 
 SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
@@ -142,7 +140,7 @@ SPEC CHECKSUMS:
   FirebaseCore: 35747502d9e8c6ee217385ad04446c7c2aaf9c5c
   FirebaseDatabase: 0621689f77528d62b47e1c06ca737c4c19275d1a
   FirebaseInstanceID: e2fa4cb35ef5558c200f7f0ad8a53e212215f93e
-  GeoFire: e3ae6f4be3f2466c3467ef6c1c203db3af935c59
+  FirebaseStorage: 3d22c041370593e639fba013d1eb698a8dae2881
   GoogleAppMeasurement: 98b71f5e04142793729a5ef23e5b96651ff4b70f
   GoogleUtilities: 95996bea7c7d9b8fb811b7507669a4a8762f80c7
   GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
@@ -153,6 +151,6 @@ SPEC CHECKSUMS:
   SnapSDK: c71296609cc8ed78b79cf202a70acf939fbf2fc3
   SwiftKeychainWrapper: 82c4c02cdc36f9a24f7edfcaab3e336401caa1a1
 
-PODFILE CHECKSUM: 274ec73dbae14bb9629469977708f27c1319a78a
+PODFILE CHECKSUM: 3d04c0f04c3372d967e3d8857a3a95e8d9838042
 
 COCOAPODS: 1.5.3

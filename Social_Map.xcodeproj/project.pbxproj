@@ -29,6 +29,12 @@
 		78FB1F862246F4F3008A4DF3 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FB1F852246F4F3008A4DF3 /* PostTableViewCell.swift */; };
 		78FB1F8922473D18008A4DF3 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FB1F8822473D18008A4DF3 /* DataService.swift */; };
 		78FB1F8C22474DA5008A4DF3 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FB1F8B22474DA5008A4DF3 /* Post.swift */; };
+		78FB1F8E224849AC008A4DF3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FB1F8D224849AC008A4DF3 /* MapViewController.swift */; };
+		78FB1FB822484DA4008A4DF3 /* GFBase32Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FB1FAD22484DA4008A4DF3 /* GFBase32Utils.m */; };
+		78FB1FB922484DA4008A4DF3 /* GeoFire.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FB1FAF22484DA4008A4DF3 /* GeoFire.m */; };
+		78FB1FBA22484DA4008A4DF3 /* GFGeoHashQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FB1FB022484DA4008A4DF3 /* GFGeoHashQuery.m */; };
+		78FB1FBB22484DA4008A4DF3 /* GFQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FB1FB122484DA4008A4DF3 /* GFQuery.m */; };
+		78FB1FBC22484DA4008A4DF3 /* GFGeoHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FB1FB222484DA4008A4DF3 /* GFGeoHash.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +81,23 @@
 		78FB1F852246F4F3008A4DF3 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		78FB1F8822473D18008A4DF3 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		78FB1F8B22474DA5008A4DF3 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		78FB1F8D224849AC008A4DF3 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		78FB1FA722484DA4008A4DF3 /* GeoFire-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GeoFire-Prefix.pch"; sourceTree = "<group>"; };
+		78FB1FA922484DA4008A4DF3 /* GFBase32Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFBase32Utils.h; sourceTree = "<group>"; };
+		78FB1FAA22484DA4008A4DF3 /* GFGeoHashQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFGeoHashQuery.h; sourceTree = "<group>"; };
+		78FB1FAB22484DA4008A4DF3 /* GFGeoHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFGeoHash.h; sourceTree = "<group>"; };
+		78FB1FAC22484DA4008A4DF3 /* GFQuery+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GFQuery+Private.h"; sourceTree = "<group>"; };
+		78FB1FAD22484DA4008A4DF3 /* GFBase32Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFBase32Utils.m; sourceTree = "<group>"; };
+		78FB1FAE22484DA4008A4DF3 /* GeoFire+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GeoFire+Private.h"; sourceTree = "<group>"; };
+		78FB1FAF22484DA4008A4DF3 /* GeoFire.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoFire.m; sourceTree = "<group>"; };
+		78FB1FB022484DA4008A4DF3 /* GFGeoHashQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFGeoHashQuery.m; sourceTree = "<group>"; };
+		78FB1FB122484DA4008A4DF3 /* GFQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFQuery.m; sourceTree = "<group>"; };
+		78FB1FB222484DA4008A4DF3 /* GFGeoHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFGeoHash.m; sourceTree = "<group>"; };
+		78FB1FB422484DA4008A4DF3 /* GFRegionQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFRegionQuery.h; sourceTree = "<group>"; };
+		78FB1FB522484DA4008A4DF3 /* GeoFire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoFire.h; sourceTree = "<group>"; };
+		78FB1FB622484DA4008A4DF3 /* GFQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFQuery.h; sourceTree = "<group>"; };
+		78FB1FB722484DA4008A4DF3 /* GFCircleQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFCircleQuery.h; sourceTree = "<group>"; };
+		78FB1FBF22484EB1008A4DF3 /* Map-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Map-Bridging-Header.h"; sourceTree = "<group>"; };
 		910500D45A98A92AC2BD2790 /* Pods-Social_Map.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social_Map.release.xcconfig"; path = "Pods/Target Support Files/Pods-Social_Map/Pods-Social_Map.release.xcconfig"; sourceTree = "<group>"; };
 		9BABBCE393DCE2C522D05BEA /* Pods_Social_MapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Social_MapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B447EF15EA071643A190F452 /* Pods-Social_Map.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social_Map.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Social_Map/Pods-Social_Map.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,7 +149,6 @@
 		78EAF8162244765400F10DD2 = {
 			isa = PBXGroup;
 			children = (
-				78FB1F8A22474D82008A4DF3 /* Model */,
 				78EAF8212244765400F10DD2 /* Social_Map */,
 				78EAF8202244765400F10DD2 /* Products */,
 				2CEA4F2748DE2C7FCCF4BC19 /* Pods */,
@@ -147,6 +169,8 @@
 		78EAF8212244765400F10DD2 /* Social_Map */ = {
 			isa = PBXGroup;
 			children = (
+				78FB1FA622484DA4008A4DF3 /* GeoFire */,
+				78FB1F8A22474D82008A4DF3 /* Model */,
 				78FB1F8722473CFB008A4DF3 /* Services */,
 				78EAF8722245B45400F10DD2 /* Social_Map.entitlements */,
 				78EAF8692244B65A00F10DD2 /* Utili */,
@@ -159,6 +183,7 @@
 				78EAF8312244765600F10DD2 /* Info.plist */,
 				78EAF8292244765400F10DD2 /* Social_Map.xcdatamodeld */,
 				78EAF8532244783E00F10DD2 /* GoogleService-Info.plist */,
+				78FB1FBF22484EB1008A4DF3 /* Map-Bridging-Header.h */,
 			);
 			path = Social_Map;
 			sourceTree = "<group>";
@@ -168,6 +193,7 @@
 			children = (
 				78EAF8642244A60C00F10DD2 /* SignInViewController.swift */,
 				78FB1F81224612E2008A4DF3 /* FeedViewController.swift */,
+				78FB1F8D224849AC008A4DF3 /* MapViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -207,6 +233,44 @@
 				78FB1F8B22474DA5008A4DF3 /* Post.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		78FB1FA622484DA4008A4DF3 /* GeoFire */ = {
+			isa = PBXGroup;
+			children = (
+				78FB1FA722484DA4008A4DF3 /* GeoFire-Prefix.pch */,
+				78FB1FA822484DA4008A4DF3 /* Implementation */,
+				78FB1FB322484DA4008A4DF3 /* API */,
+			);
+			path = GeoFire;
+			sourceTree = "<group>";
+		};
+		78FB1FA822484DA4008A4DF3 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				78FB1FA922484DA4008A4DF3 /* GFBase32Utils.h */,
+				78FB1FAA22484DA4008A4DF3 /* GFGeoHashQuery.h */,
+				78FB1FAB22484DA4008A4DF3 /* GFGeoHash.h */,
+				78FB1FAC22484DA4008A4DF3 /* GFQuery+Private.h */,
+				78FB1FAD22484DA4008A4DF3 /* GFBase32Utils.m */,
+				78FB1FAE22484DA4008A4DF3 /* GeoFire+Private.h */,
+				78FB1FAF22484DA4008A4DF3 /* GeoFire.m */,
+				78FB1FB022484DA4008A4DF3 /* GFGeoHashQuery.m */,
+				78FB1FB122484DA4008A4DF3 /* GFQuery.m */,
+				78FB1FB222484DA4008A4DF3 /* GFGeoHash.m */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		78FB1FB322484DA4008A4DF3 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				78FB1FB422484DA4008A4DF3 /* GFRegionQuery.h */,
+				78FB1FB522484DA4008A4DF3 /* GeoFire.h */,
+				78FB1FB622484DA4008A4DF3 /* GFQuery.h */,
+				78FB1FB722484DA4008A4DF3 /* GFCircleQuery.h */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		F02E420AE828E454FFB7D750 /* Frameworks */ = {
@@ -484,14 +548,20 @@
 				78FB1F82224612E2008A4DF3 /* FeedViewController.swift in Sources */,
 				78FB1F8922473D18008A4DF3 /* DataService.swift in Sources */,
 				78FB1F8C22474DA5008A4DF3 /* Post.swift in Sources */,
+				78FB1FB922484DA4008A4DF3 /* GeoFire.m in Sources */,
 				78EAF86F224575E900F10DD2 /* GreatField.swift in Sources */,
 				78EAF86D2245746D00F10DD2 /* RoundButton.swift in Sources */,
+				78FB1FBA22484DA4008A4DF3 /* GFGeoHashQuery.m in Sources */,
 				78EAF82B2244765400F10DD2 /* Social_Map.xcdatamodeld in Sources */,
 				78EAF8712245778C00F10DD2 /* GreatButton.swift in Sources */,
 				78FB1F842246DA6E008A4DF3 /* CircleView.swift in Sources */,
+				78FB1FBC22484DA4008A4DF3 /* GFGeoHash.m in Sources */,
 				78EAF8232244765400F10DD2 /* AppDelegate.swift in Sources */,
+				78FB1FB822484DA4008A4DF3 /* GFBase32Utils.m in Sources */,
 				78EAF8682244B5E800F10DD2 /* GreatView.swift in Sources */,
+				78FB1FBB22484DA4008A4DF3 /* GFQuery.m in Sources */,
 				78EAF86B2244B67200F10DD2 /* Constants.swift in Sources */,
+				78FB1F8E224849AC008A4DF3 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -679,6 +749,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.caincomputers.Social-Map";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Social_Map/Map-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -704,6 +775,7 @@
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.caincomputers.Social-Map";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Social_Map/Map-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
