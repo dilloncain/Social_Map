@@ -31,7 +31,7 @@ import Firebase
 //
 //}
 
-class SocialMapViewController: UIViewController {
+class SocialMapViewController: UIViewController, GMSMapViewDelegate {
     @IBAction func socialMapBackButtonPressed(_ sender: Any) {
     }
     
