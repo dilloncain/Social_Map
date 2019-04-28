@@ -17,10 +17,9 @@ target 'Social_Map' do
   pod 'SwiftKeychainWrapper'
   pod 'Alamofire', '~> 4.4'
   pod 'AlamofireImage', '~> 3.5'
-  
-  
-
-  
+  pod 'GooglePlaces'
+  pod 'GooglePlacePicker'
+  pod 'GoogleMaps'
 
   target 'Social_MapTests' do
     inherit! :search_paths

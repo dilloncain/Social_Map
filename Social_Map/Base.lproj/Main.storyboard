@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -99,6 +99,18 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hu4-in-2UF">
+                                <rect key="frame" x="147" y="620" width="121" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Map Access">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="hte-7y-o5A" kind="show" id="xBM-37-ka4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -465,6 +477,34 @@
             </objects>
             <point key="canvasLocation" x="1801.449275362319" y="133.69565217391306"/>
         </scene>
+        <!--Social Map View Controller-->
+        <scene sceneID="7XY-mU-09z">
+            <objects>
+                <viewController id="hte-7y-o5A" customClass="SocialMapViewController" customModule="Social_Map" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xXf-2i-Zng">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DeG-17-qfF">
+                                <rect key="frame" x="26" y="686" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="socialMapBackButtonPressed:" destination="hte-7y-o5A" eventType="touchUpInside" id="8Pa-3K-D2i"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DeG-17-qfF" firstAttribute="leading" secondItem="UZJ-Vv-IL6" secondAttribute="leading" constant="26" id="2UK-5l-sm2"/>
+                            <constraint firstItem="UZJ-Vv-IL6" firstAttribute="bottom" secondItem="DeG-17-qfF" secondAttribute="bottom" constant="20" id="5n5-SP-YLF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UZJ-Vv-IL6"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dgd-o1-tSg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="597" y="832"/>
+        </scene>
         <!--Pop View Controller-->
         <scene sceneID="rn1-aM-Kns">
             <objects>
@@ -516,17 +556,17 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Arrow_Direction" width="45" height="45"/>
-        <image name="Facebook" width="260" height="260"/>
+        <image name="Arrow_Direction" width="15" height="15"/>
+        <image name="Facebook" width="86.666664123535156" height="86.666664123535156"/>
         <image name="backbutton" width="10" height="17"/>
-        <image name="background-forest" width="5230" height="3269"/>
+        <image name="background-forest" width="1743.3333740234375" height="1089.6666259765625"/>
         <image name="black_photo_btn" width="20" height="18"/>
         <image name="heart_icon" width="54" height="54"/>
-        <image name="previous_arrow" width="27" height="45"/>
-        <image name="profile-photo" width="128" height="128"/>
+        <image name="previous_arrow" width="9" height="15"/>
+        <image name="profile-photo" width="42.666667938232422" height="42.666667938232422"/>
         <image name="socialMapLogo" width="308" height="117"/>
         <image name="stories_deselected_icon" width="16" height="20"/>
-        <image name="world_globe" width="45" height="45"/>
+        <image name="world_globe" width="15" height="15"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="A19-MC-Qmx"/>
