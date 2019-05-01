@@ -525,6 +525,7 @@
                         <viewLayoutGuide key="safeArea" id="UZJ-Vv-IL6"/>
                     </view>
                     <connections>
+                        <outlet property="mapView" destination="q3F-8S-tHs" id="wrm-3p-o4v"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignInTwo" id="vUW-y4-oCH"/>
                     </connections>
                 </viewController>
