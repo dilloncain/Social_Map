@@ -85,7 +85,7 @@ class PlaceDetailViewController: BaseContainerViewController {
 
   private func lookupPhoto() {
     // Lookup the photos associated with this place.
-    placesClient.lookUpPhotos(forPlaceID: place.placeID) { (metadata, error) in
+    placesClient.lookUpPhotos(forPlaceID: place.placeID ?? "") { (metadata, error) in
       // Handle the result if it was successful.
       if let metadata = metadata {
         // Check to see if any photos were found.

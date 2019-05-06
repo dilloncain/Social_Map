@@ -9,3 +9,5 @@
 
 #import "SCSDKLoginClient.h"
 #import "SCSDKLoginButton.h"
+
+#import "SCSDKLoginKitErrorCode.h"

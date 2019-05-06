@@ -11,3 +11,4 @@
 #import "SCSDKBitmojiStickerPickerTheme.h"
 #import "SCSDKBitmojiStickerPickerViewController.h"
 #import "SCSDKBitmojiIconView.h"
+#import "SCSDKBitmojiStickerPickerSearchMode.h"

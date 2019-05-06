@@ -22,8 +22,28 @@ import GooglePlaces
 class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
 
-  func application(_ application: UIApplication,
-    didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]?) -> Bool {
+  /// `UIApplicationLaunchOptionsKey` has been renamed to `UIApplication.LaunchOptionsKey`
+  /// in Swift 4.2 (Xcode 10+). This macro switch allows supporting both.
+  #if swift(>=4.2)
+  func application(
+    _ application: UIApplication,
+    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]?
+    ) -> Bool {
+    return commonApplication(application, didFinishLaunchingWithOptions: launchOptions)
+  }
+  #else
+  func application(
+    _ application: UIApplication,
+    didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?
+    ) -> Bool {
+    return commonApplication(application, didFinishLaunchingWithOptions: launchOptions)
+  }
+  #endif
+
+  private func commonApplication(
+    _ application: UIApplication,
+    didFinishLaunchingWithOptions launchOptions: [AnyHashable: Any]?
+    ) -> Bool  {
 
     // Do a quick check to see if you've provided an API key, in a real app you wouldn't need this
     // but for the demo it means we can provide a better error message if you haven't.
@@ -35,7 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       fatalError(msg)
     }
 
-    // Provide the Places API with your API key.
+    // Provide the Places SDK with your API key.
     GMSPlacesClient.provideAPIKey(kPlacesAPIKey)
     // Provide the Maps API with your API key. We need to provide this as well because the Place
     // Picker displays a Google Map.

@@ -65,6 +65,8 @@
 		6179D36D497552CE54083170 /* Pods_Social_Map.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Social_Map.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6839CAB9865DCEE7A33F2BEE /* Pods-Social_MapUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social_MapUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Social_MapUITests/Pods-Social_MapUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		787CA5F822754939005AF57A /* SocialMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMapViewController.swift; sourceTree = "<group>"; };
+		789B48D0227ED4B60098A967 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		789B48D2227ED4BF0098A967 /* AlamofireImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AlamofireImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78EAF81F2244765400F10DD2 /* Social_Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Social_Map.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78EAF8222244765400F10DD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78EAF8272244765400F10DD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -299,6 +301,8 @@
 		F02E420AE828E454FFB7D750 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				789B48D2227ED4BF0098A967 /* AlamofireImage.framework */,
+				789B48D0227ED4B60098A967 /* Alamofire.framework */,
 				6179D36D497552CE54083170 /* Pods_Social_Map.framework */,
 				9BABBCE393DCE2C522D05BEA /* Pods_Social_MapTests.framework */,
 				DF47DA1F9A5D7E4E9C681CAB /* Pods_Social_MapUITests.framework */,
@@ -379,6 +383,7 @@
 				TargetAttributes = {
 					78EAF81E2244765400F10DD2 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						SystemCapabilities = {
 							com.apple.Keychain = {
 								enabled = 1;
@@ -810,7 +815,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.caincomputers.Social-Map";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Social_Map/Map-Bridging-Header.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -837,7 +842,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.caincomputers.Social-Map";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Social_Map/Map-Bridging-Header.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

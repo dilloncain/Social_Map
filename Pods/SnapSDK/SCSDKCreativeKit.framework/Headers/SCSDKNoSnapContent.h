@@ -6,10 +6,12 @@
 //
 
 #import "SCSDKSnapContent.h"
-#import "SCSDKCameraViewState.h"
 
 #import <Foundation/Foundation.h>
 
+@class SCSDKCameraViewState;
+
+NS_ASSUME_NONNULL_BEGIN
 
 @interface SCSDKNoSnapContent : NSObject<SCSDKSnapContent>
 
@@ -20,3 +22,5 @@
 @property (nonatomic, strong) SCSDKCameraViewState * _Nullable cameraViewState;
 
 @end
+
+NS_ASSUME_NONNULL_END

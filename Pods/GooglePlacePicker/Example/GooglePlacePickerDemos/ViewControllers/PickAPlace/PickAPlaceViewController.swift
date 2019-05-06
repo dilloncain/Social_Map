@@ -44,7 +44,7 @@ class PickAPlaceViewController: UIViewController {
     view.clipsToBounds = true
 
     // Set the build number.
-    buildNumberLabel.text = "Places API Build: \(GMSPlacesClient.sdkVersion())"
+    buildNumberLabel.text = "Places SDK Build: \(GMSPlacesClient.sdkVersion())"
 
     // Setup the constraint between the container and the layout guides to be consistant with
     // LaunchScreen.storyboard. Because this view controller uses XIB rather than storyboard files

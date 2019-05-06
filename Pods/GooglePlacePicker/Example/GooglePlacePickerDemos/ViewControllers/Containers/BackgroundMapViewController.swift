@@ -56,7 +56,11 @@ class BackgroundMapViewController: UIViewController, CAAnimationDelegate {
     // Restart the animation whenever the 'reduce motion' setting changes. This will allow the
     // animation code to adjust for the setting. See the implementation of startAnimating() for
     // more details.
+#if swift(>=4.2)
+    let notificationName = UIAccessibility.reduceMotionStatusDidChangeNotification
+#else
     let notificationName = NSNotification.Name.UIAccessibilityReduceMotionStatusDidChange
+#endif
     reduceMotionChanged = NotificationObserver(name: notificationName, target: self,
                                                action: type(of: self).restartAnimation)
 
@@ -105,9 +109,15 @@ class BackgroundMapViewController: UIViewController, CAAnimationDelegate {
 
   private func startAnimatingMap() {
     // If 'reduce motion' is enabled, don't start the animation.
+#if swift(>=4.2)
+    if UIAccessibility.isReduceMotionEnabled {
+      return
+    }
+#else
     if UIAccessibilityIsReduceMotionEnabled() {
       return
     }
+#endif
 
     if #available(iOS 9.0, *) {
       // If 'low power mode' is enabled, don't start the animation.
@@ -144,12 +154,21 @@ class BackgroundMapViewController: UIViewController, CAAnimationDelegate {
     latAnimation.fromValue = lastCoordinate.latitude
     latAnimation.toValue = targetCoordinate.latitude
     latAnimation.duration = animationDuration
+#if swift(>=4.2)
+    latAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+#else
     latAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+#endif
+
     let lngAnimation = CABasicAnimation(keyPath: kGMSLayerCameraLongitudeKey)
     lngAnimation.fromValue = lastCoordinate.longitude
     lngAnimation.toValue = targetCoordinate.longitude
     lngAnimation.duration = animationDuration
+#if swift(>=4.2)
+    lngAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+#else
     lngAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+#endif
 
     // Create an animation group for the two animations.
     let group = CAAnimationGroup()

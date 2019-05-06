@@ -8,7 +8,9 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface SCSDKSnapSticker : NSObject<NSSecureCoding>
+NS_ASSUME_NONNULL_BEGIN
+
+@interface SCSDKSnapSticker : NSObject
 
 /**
  * @property stickerImage
@@ -53,14 +55,14 @@
  * @brief Fixed width of sticker. If fixed size is not provided, sticker will scale with a default max
  *        size of 200.
  */
-@property (nonatomic, assign) CGFloat width;
+@property (nonatomic, assign) CGFloat width DEPRECATED_ATTRIBUTE;
 
 /**
  * @property height
  * @brief Fixed height of sticker. If fixed size is not provided, sticker will scale with a default max
  *        size of 200.
  */
-@property (nonatomic, assign) CGFloat height;
+@property (nonatomic, assign) CGFloat height DEPRECATED_ATTRIBUTE;
 
 /**
  * Initializes an SCSDKSnapSticker instance.
@@ -68,7 +70,7 @@
  * @param stickerImage UIImage to be used as a sticker.
  * @return An SCSDKSnapSticker instance initialized stickerImage.
  */
-- (instancetype _Nonnull)initWithStickerImage:(UIImage * _Nonnull)stickerImage;
+- (instancetype)initWithStickerImage:(UIImage *)stickerImage;
 
 /**
  * Initializes an SCSDKSnapSticker instance.
@@ -77,8 +79,10 @@
  * @param isAnimated BOOL value indicating whether or not sticker is animated.
  * @return An SCSDKSnapSticker instance initialized with stickerUrl.
  */
-- (instancetype _Nonnull)initWithStickerUrl:(NSURL * _Nonnull)stickerUrl isAnimated:(BOOL)isAnimated;
+- (instancetype)initWithStickerUrl:(NSURL *)stickerUrl isAnimated:(BOOL)isAnimated;
 
-- (NSUInteger)size;
+- (instancetype)init NS_UNAVAILABLE;
 
 @end
+
+NS_ASSUME_NONNULL_END

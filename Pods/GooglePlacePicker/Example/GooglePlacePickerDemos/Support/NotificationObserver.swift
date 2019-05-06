@@ -45,7 +45,7 @@ class NotificationObserver<T: AnyObject>: NSObject {
     NotificationCenter.default.removeObserver(self)
   }
 
-  func notificationFired(notification: NSNotification) {
+  @objc func notificationFired(notification: NSNotification) {
     guard let target = target else {
       // May as well deregister from notifications if our target has gone away.
       NotificationCenter.default.removeObserver(self)

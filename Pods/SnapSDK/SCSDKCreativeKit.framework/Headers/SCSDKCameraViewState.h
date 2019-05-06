@@ -7,6 +7,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 typedef NS_ENUM(NSInteger, SCSDKCameraPosition) {
     SCSDKCameraPositionUnknown,
     SCSDKCameraPositionFront,
@@ -15,7 +17,7 @@ typedef NS_ENUM(NSInteger, SCSDKCameraPosition) {
 
 @interface SCSDKCameraViewState : NSObject
 
-+ (NSString *)stringValueForSCSDKCameraPosition:(SCSDKCameraPosition)cameraPosition;
+- (instancetype)initWithCameraPosition:(SCSDKCameraPosition)cameraPosition;
 
 /**
  * @property cameraPosition
@@ -24,3 +26,5 @@ typedef NS_ENUM(NSInteger, SCSDKCameraPosition) {
 @property (nonatomic, assign) SCSDKCameraPosition cameraPosition;
 
 @end
+
+NS_ASSUME_NONNULL_END

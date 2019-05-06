@@ -7,23 +7,14 @@
 
 @import Foundation;
 
-#define SC_SDK_SNAP_ERROR_DOMAIN @"SCSDKSnapErrorDomain"
+#define SC_SDK_SNAP_ERROR_DOMAIN @"SCSDKCreativeKitErrorDomain"
 
-typedef NS_ENUM(NSInteger, SCSDKSnapErrorCode) {
-    SCSDKSnapMainContentFailure = 0,
-    SCSDKSnapStorageLinksUnexpectedStatusCode = 1,
-    SCSDKSnapStorageLinksUnexpectedResponse = 2,
-    SCSDKSnapUploadUnexpectedStatusCode = 3,
-    SCSDKSnapMalformattedSnapContent = 4,
-    SCSDKSnapStickerContentFailure = 5,
-    SCSDKSnapDeepLinkFailure = 6,
-    SCSDKSnapStorageLinksCacheFetchFailure = 7,
-    SCSDKSnapEncryptionMetadataCacheFetchFailure = 8,
-
-    SCSDKSnapEncryptionMetadataUnexpectedStatusCode = 9,
-    SCSDKSnapEncryptionMetadataUnexpectedResponse = 10,
-
-    SCSDKSnapLocalShareInProgress = 11,
-
-    SCSDKUnknownErrorCode = -1,
+typedef NS_ENUM(NSInteger, SCSDKCreativeKitErrorCode) {
+    SCSDKCreativeKitErrorCodeUnknown,
+    SCSDKCreativeKitErrorCodeInvalidArgument,
+    SCSDKCreativeKitErrorCodeMainMediaDataReadFailure,
+    SCSDKCreativeKitErrorCodeStickerDataReadFailure,
+    SCSDKCreativeKitErrorCodeEncryptionMetadataReadFailure,
+    SCSDKCreativeKitErrorCodeDeepLinkFailure,
+    SCSDKCreativeKitErrorCodeIllegalState,
 };

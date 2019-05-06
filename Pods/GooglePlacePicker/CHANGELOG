@@ -1,3 +1,11 @@
+Version 3.0.0 - January 2019
+==========================
+Note:
+  - The place picker is deprecated as of January, 2019. This feature will
+    be turned down on July 31, 2019, and will no longer be available or
+    supported after that date.
+  - Support for iOS 8.0 has been dropped. The new minimum is iOS 9.0.
+
 Version 2.7.0 - April 2018
 ==========================
 Note:

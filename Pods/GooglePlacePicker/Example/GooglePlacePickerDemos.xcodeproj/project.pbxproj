@@ -13,6 +13,7 @@
 		29E5953DD17B8AFD0FA00A49 /* PickAPlaceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D71A3886B92484E31061FE2E /* PickAPlaceViewController.xib */; };
 		2A7447638B22569980DDAF5F /* ShadowLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2836DC45ED6FF12A8045D24D /* ShadowLineView.swift */; };
 		2B2A8CF73A6C066122802F79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF48282F0284AC80B150415 /* AppDelegate.swift */; };
+		2FE56F46ABEB13549EA4326E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949EBB6EB538C05BD9F67F54 /* UIKit.framework */; };
 		32FD6CF35907E26E1A619A7A /* PickAPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0B0E2CDF0E968CD1E79E19 /* PickAPlaceViewController.swift */; };
 		38FC54D803D779C5D0C5B881 /* PlaceAttributeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 902EE76ACAF122B481EC2327 /* PlaceAttributeCell.xib */; };
 		3FA2445646E180671F57C44A /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F27B8350AA9CD3D97A6D7 /* ShadowView.swift */; };
@@ -29,7 +30,6 @@
 		D6F5A7D00B2846B512C5DD71 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 755A20A0114418AD8398FB59 /* Localizable.strings */; };
 		D7582708599410FEFDF53E75 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AE6F1EB7F463645CC2E62E /* Styles.swift */; };
 		DF0041C4FA445D0D3ACEACA9 /* PlaceAttributeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39898850CF055DC94490206F /* PlaceAttributeCell.swift */; };
-		E71AF40604AB4E74A9F8E210 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949EBB6EB538C05BD9F67F54 /* UIKit.framework */; };
 		EEA61309D2F22B56C5AFB003 /* NotificationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAAEC1899F5BAFF817EC73F /* NotificationObserver.swift */; };
 		F32631FA10536780187DC754 /* PlaceDetailTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904D7FB86C333B1AC8DAC707 /* PlaceDetailTableViewDataSource.swift */; };
 /* End PBXBuildFile section */
@@ -109,7 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E71AF40604AB4E74A9F8E210 /* UIKit.framework in Frameworks */,
+				2FE56F46ABEB13549EA4326E /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,7 +173,7 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		B40D4294C2D6A5CF1A68F4E4 /* Frameworks */ = {
+		B1ECD1943C7740927B14D983 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				949EBB6EB538C05BD9F67F54 /* UIKit.framework */,
@@ -185,7 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				D50176A6963190422233C501 /* Source */,
-				B40D4294C2D6A5CF1A68F4E4 /* Frameworks */,
+				B1ECD1943C7740927B14D983 /* Frameworks */,
 				6F85D8BB7D3DDB7CCC49F660 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -255,8 +255,6 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0900;
 			};
 			buildConfigurationList = 8414C09EE75491FC466E0F17 /* Build configuration list for PBXProject "GooglePlacePickerDemos" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -395,7 +393,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ./GooglePlacePickerDemos/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					.,

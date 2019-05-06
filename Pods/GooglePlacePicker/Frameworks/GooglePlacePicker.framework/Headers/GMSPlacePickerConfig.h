@@ -1,6 +1,6 @@
 //
 //  GMSPlacePickerConfig.h
-//  Google Places API for iOS
+//  Google Places SDK for iOS
 //
 //  Copyright 2016 Google Inc.
 //
@@ -19,7 +19,7 @@
 #import <GooglePlaces/GooglePlaces.h>
 #endif
 
-NS_ASSUME_NONNULL_BEGIN;
+NS_ASSUME_NONNULL_BEGIN
 
 
 /**
@@ -40,4 +40,4 @@ NS_ASSUME_NONNULL_BEGIN;
 
 @end
 
-NS_ASSUME_NONNULL_END;
+NS_ASSUME_NONNULL_END

@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 #import "SCSDKBitmojiStickerPickerConfig.h"
+#import "SCSDKBitmojiStickerPickerSearchMode.h"
+#import "SCSDKBitmojiIconView.h"
 
 @class SCSDKBitmojiStickerPickerViewController;
 
@@ -35,6 +37,16 @@
  */
 - (void)bitmojiStickerPickerViewController:(nonnull SCSDKBitmojiStickerPickerViewController *)stickerPickerViewController
         searchFieldFocusDidChangeWithFocus:(BOOL)hasFocus;
+
+
+@optional
+/**
+ * Called whenever the user taps on a suggested search tag in the sticker picker
+ *
+ * @param stickerPickerViewController The calling Bitmoji sticker picker view controller
+ */
+- (void)bitmojiStickerPickerViewControllerDidSelectSearchTag:(nonnull SCSDKBitmojiStickerPickerViewController *)stickerPickerViewController;
+
 @end
 
 /**
@@ -77,6 +89,8 @@
  *
  * @param text The search term
  */
-- (void)setSearchTerm:(NSString *)text;
+- (void)setSearchTerm:(NSString *)text searchMode:(SCSDKBitmojiStickerPickerSearchMode)searchMode;
+- (void)attachBitmojiIcon:(SCSDKBitmojiIconView *)bitmojiIcon;
+- (void)removeBitmojiIcon:(SCSDKBitmojiIconView *)bitmojiIcon;
 
 @end

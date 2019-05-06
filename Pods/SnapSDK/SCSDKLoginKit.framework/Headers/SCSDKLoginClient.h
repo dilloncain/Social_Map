@@ -20,10 +20,20 @@ typedef void(^SCOAuth2GetResourcesSuccessCompletionBlock)(NSDictionary * _Nullab
 /**
  * Callback to trigger when fetch resource failed.
  *
- * @param error that happened when fetch data from resource server.
- * @param isUserLoggedOut set to YES if the connection between 3PA and Snapchat is broken or user is not logged in to 3PA using Snapchat. Set to NO if other errors occur while fetching data from Snapchat
+ * @param error Error responsible for user data fetchinf failure
+ * @param isUserLoggedOut Set to YES if the connection between 3PA and Snapchat is broken or user is not logged in to
+ *                        3PA using Snapchat. Set to NO if other errors occur while fetching data from Snapchat
  */
 typedef void(^SCOAuth2GetResourcesFailureCompletionBlock)(NSError * _Nullable error, BOOL isUserLoggedOut);
+
+/**
+ * The completion handler to call when getting a requeset token is complete. The access token returned, if present,
+ * is always valid.
+ *
+ * @param accessToken   Raw string value of an OAuth 2.0 acces token.
+ * @param error         Error returned in case of a failure getting an access token.
+ */
+typedef void(^SCOAuth2GetAccessTokenCompletionBlock)(NSString * _Nullable accessToken, NSError *_Nullable error);
 
 /**
  * Protocol for observing all changes that occur for a user's login status. Notifications will always occur
@@ -79,7 +89,7 @@ typedef void(^SCOAuth2GetResourcesFailureCompletionBlock)(NSError * _Nullable er
  *
  * @param completion block be trigged when finish revoking session.
  */
-+ (void)unlinkCurrentSessionWithCompletion:(nullable void (^)(BOOL success))completion;
++ (void)unlinkCurrentSessionWithCompletion:(nullable void (^)(BOOL success))completion DEPRECATED_ATTRIBUTE;
 
 /**
  * Revoke all sessions.
@@ -99,6 +109,13 @@ typedef void(^SCOAuth2GetResourcesFailureCompletionBlock)(NSError * _Nullable er
                      variables:(nullable NSDictionary<NSString *, id> *)variables
                        success:(SCOAuth2GetResourcesSuccessCompletionBlock)success
                        failure:(SCOAuth2GetResourcesFailureCompletionBlock)failure;
+
+/**
+ * Performs a task to get an OAuth 2.0 access token.
+ *
+ * @param completion The completion handler to call when task to get an access token is complete.
+ */
++ (void)getAccessTokenWithCompletion:(nullable SCOAuth2GetAccessTokenCompletionBlock)completion;
 
 /**
  * Determines whether the user has authorized the current session to have access to resources

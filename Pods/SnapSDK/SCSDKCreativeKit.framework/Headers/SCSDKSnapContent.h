@@ -5,14 +5,15 @@
 //  Copyright © 2017 Snap, Inc. All rights reserved.
 //
 
+#import "SCSDKCreativeKitModelValidating.h"
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
 @class SCSDKSnapSticker;
+@protocol SCSDKCreativeKitModelValidating;
 
-#define SNAP_CONNECT_SDK_SNAP_MAX_STICKERS 1
-
-@protocol SCSDKSnapContent <NSObject>
+@protocol SCSDKSnapContent <SCSDKCreativeKitModelValidating>
 
 /**
  * @property caption

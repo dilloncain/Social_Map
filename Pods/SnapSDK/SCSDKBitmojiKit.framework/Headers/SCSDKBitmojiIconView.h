@@ -14,4 +14,6 @@
  */
 @interface SCSDKBitmojiIconView : UIView
 
+@property (nonatomic, strong) UIImage *defaultImage;
+
 @end

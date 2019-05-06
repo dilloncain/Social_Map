@@ -7,7 +7,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SCSDKSnapPhoto : NSObject<NSSecureCoding>
+NS_ASSUME_NONNULL_BEGIN
+
+@interface SCSDKSnapPhoto : NSObject
 
 /**
  * @property image
@@ -27,7 +29,7 @@
  * @param image UIImage to be used as a Snap.
  * @return An SCSDKSnapPhoto instance initialized with image.
  */
-- (instancetype _Nonnull)initWithImage:(UIImage * _Nonnull)image;
+- (instancetype _Nonnull)initWithImage:(UIImage *)image;
 
 /**
  * Initializes an SCSDKSnapPhoto instance.
@@ -35,6 +37,8 @@
  * @param imageUrl NSURL of an image file on disk to be used as a Snap.
  * @return An SCSDKSnapPhoto instance initialized with imageUrl.
  */
-- (instancetype _Nonnull)initWithImageUrl:(NSURL * _Nonnull)imageUrl;
+- (instancetype _Nonnull)initWithImageUrl:(NSURL *)imageUrl;
 
 @end
+
+NS_ASSUME_NONNULL_END

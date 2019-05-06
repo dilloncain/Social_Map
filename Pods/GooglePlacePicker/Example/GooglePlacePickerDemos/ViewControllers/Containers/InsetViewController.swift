@@ -48,18 +48,33 @@ class InsetViewController: BaseContainerViewController {
     super.viewDidLoad()
 
     // Add the background and the content controllers.
-
+#if swift(>=4.2)
+    addChild(backgroundViewController)
+#else
     addChildViewController(backgroundViewController)
+#endif
     backgroundViewController.view.frame = view.bounds
     backgroundViewController.view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     view.addSubview(backgroundViewController.view)
+#if swift(>=4.2)
+    backgroundViewController.didMove(toParent: self)
+#else
     backgroundViewController.didMove(toParentViewController: self)
+#endif
 
+#if swift(>=4.2)
+    addChild(contentViewController)
+#else
     addChildViewController(contentViewController)
+#endif
     view.addSubview(contentViewController.view)
     contentViewController.view.autoresizingMask = [.flexibleTopMargin, .flexibleLeftMargin,
                                                    .flexibleRightMargin, .flexibleBottomMargin]
+#if swift(>=4.2)
+    contentViewController.didMove(toParent: self)
+#else
     contentViewController.didMove(toParentViewController: self)
+#endif
   }
 
   override func viewWillAppear(_ animated: Bool) {
@@ -91,6 +106,15 @@ class InsetViewController: BaseContainerViewController {
   }
 
   /// Pass through to the appropriate child view controller for status bar appearance.
+#if swift(>=4.2)
+  public override var childForStatusBarStyle: UIViewController? {
+    if contentViewController.view.frame == view.bounds {
+      return contentViewController
+    } else {
+      return backgroundViewController
+    }
+  }
+#else
   override var childViewControllerForStatusBarStyle: UIViewController? {
     if contentViewController.view.frame == view.bounds {
       return contentViewController
@@ -98,8 +122,18 @@ class InsetViewController: BaseContainerViewController {
       return backgroundViewController
     }
   }
+#endif
 
   /// Pass through to the appropriate child view controller for status bar appearance.
+#if swift(>=4.2)
+  public override var childForStatusBarHidden: UIViewController? {
+    if contentViewController.view.frame == view.bounds {
+      return contentViewController
+    } else {
+      return backgroundViewController
+    }
+  }
+#else
   override var childViewControllerForStatusBarHidden: UIViewController? {
     if contentViewController.view.frame == view.bounds {
       return contentViewController
@@ -107,6 +141,7 @@ class InsetViewController: BaseContainerViewController {
       return backgroundViewController
     }
   }
+#endif
 
   /// Listen for changes in our children's preferred content size.
   override func preferredContentSizeDidChange(forChildContentContainer
