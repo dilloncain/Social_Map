@@ -505,33 +505,44 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DeG-17-qfF">
-                                <rect key="frame" x="26" y="686" width="37" height="30"/>
+                                <rect key="frame" x="15" y="665.66666666666663" width="37" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
                                     <action selector="socialMapBackButtonPressed:" destination="hte-7y-o5A" eventType="touchUpInside" id="PKA-n1-qiy"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7oR-Kg-s6N">
+                                <rect key="frame" x="0.0" y="715.66666666666663" width="414" height="20.333333333333371"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="DeG-17-qfF" firstAttribute="leading" secondItem="UZJ-Vv-IL6" secondAttribute="leading" constant="26" id="2UK-5l-sm2"/>
-                            <constraint firstItem="UZJ-Vv-IL6" firstAttribute="bottom" secondItem="DeG-17-qfF" secondAttribute="bottom" constant="20" id="5n5-SP-YLF"/>
-                            <constraint firstItem="UZJ-Vv-IL6" firstAttribute="bottom" secondItem="q3F-8S-tHs" secondAttribute="bottom" id="crF-aA-w9M"/>
+                            <constraint firstItem="7oR-Kg-s6N" firstAttribute="trailing" secondItem="UZJ-Vv-IL6" secondAttribute="trailing" id="04A-JS-zHo"/>
+                            <constraint firstItem="UZJ-Vv-IL6" firstAttribute="bottom" secondItem="7oR-Kg-s6N" secondAttribute="bottom" id="3F4-Wt-HgV"/>
+                            <constraint firstItem="DeG-17-qfF" firstAttribute="leading" secondItem="UZJ-Vv-IL6" secondAttribute="leading" constant="15" id="7Ij-ki-jYZ"/>
+                            <constraint firstItem="7oR-Kg-s6N" firstAttribute="top" secondItem="DeG-17-qfF" secondAttribute="bottom" constant="20" id="A5F-bW-yj4"/>
+                            <constraint firstItem="q3F-8S-tHs" firstAttribute="bottom" secondItem="UZJ-Vv-IL6" secondAttribute="bottom" id="J5G-hB-0ie"/>
                             <constraint firstItem="UZJ-Vv-IL6" firstAttribute="trailing" secondItem="q3F-8S-tHs" secondAttribute="trailing" id="kUs-45-QBO"/>
                             <constraint firstItem="q3F-8S-tHs" firstAttribute="top" secondItem="UZJ-Vv-IL6" secondAttribute="top" id="p5d-dc-U5i"/>
+                            <constraint firstItem="7oR-Kg-s6N" firstAttribute="leading" secondItem="UZJ-Vv-IL6" secondAttribute="leading" id="waq-CS-sYm"/>
                             <constraint firstItem="q3F-8S-tHs" firstAttribute="leading" secondItem="UZJ-Vv-IL6" secondAttribute="leading" id="xEd-B2-yhY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UZJ-Vv-IL6"/>
                     </view>
                     <connections>
+                        <outlet property="addressLabel" destination="7oR-Kg-s6N" id="k0h-Ys-MqJ"/>
                         <outlet property="mapView" destination="q3F-8S-tHs" id="wrm-3p-o4v"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignInTwo" id="vUW-y4-oCH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dgd-o1-tSg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="597" y="832"/>
+            <point key="canvasLocation" x="595.6521739130435" y="831.52173913043487"/>
         </scene>
         <!--Pop View Controller-->
         <scene sceneID="rn1-aM-Kns">

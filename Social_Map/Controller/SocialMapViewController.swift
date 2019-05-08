@@ -23,12 +23,14 @@ class SocialMapViewController: UIViewController, GMSMapViewDelegate {
     
     // You don't need to modify the default init(nibName:bundle:) method.
     
+    @IBOutlet weak var addressLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         mapView.delegate = self
-    
+        
     }
 }
 
@@ -57,8 +59,44 @@ extension SocialMapViewController: CLLocationManagerDelegate {
         
         mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
         // Updates camera postion to center on users current location
-
         locationManager.stopUpdatingLocation()
         // Initial location is enough and stops location updates
+    }
+    
+    private func reverseGeocodeCoordinate(_ coordinate: CLLocationCoordinate2D) {
+        
+        // Creates GMSGeocoder object to turn latitude and logitude coordinate into a street address
+        let geocoder = GMSGeocoder()
+        
+        //
+        geocoder.reverseGeocodeCoordinate(coordinate) { response, error in
+            guard let address = response?.firstResult(), let lines = address.lines else {
+                return
+            }
+            
+            // 3
+            self.addressLabel.text = lines.joined(separator: "\n")
+            
+            // 1
+            let labelHeight = self.addressLabel.intrinsicContentSize.height
+            self.mapView.padding = UIEdgeInsets(top: self.view.safeAreaInsets.top, left: 0,
+                                                bottom: labelHeight, right: 0)
+            
+            // 4
+            UIView.animate(withDuration: 0.25) {
+                //2
+                //self.pinImageVerticalConstraint.constant = ((labelHeight - self.view.safeAreaInsets.top) * 0.5)
+                self.view.layoutIfNeeded()
+            }
+        }
+    }
+    
+    
+}
+
+// MARK: - GMSMapViewDelegate
+extension SocialMapViewController {
+    func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
+        reverseGeocodeCoordinate(position.target)
     }
 }
